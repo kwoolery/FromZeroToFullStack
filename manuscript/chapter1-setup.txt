@@ -1,0 +1,13 @@
+# Setup
+
+## Github
+Github setup instructions
+
+## AWS
+AWS Elastic Beanstalk
+
+## Docker
+
+## Go
+
+## ReactJS
