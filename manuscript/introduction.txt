@@ -1,9 +1,9 @@
-# Introduction
+# 1. Introduction
 
-## Motivations
+## 1.1 Motivations
 
-## Project Based Approach
+## 1.2 Project Based Approach
 
-## Reasons for Technology Choices
+## 1.3 Reasons for Project Technology Choices
 
-## Background of Technology
+## 1.4 Background of Technology Choices
