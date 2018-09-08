@@ -1,0 +1,18 @@
+# 3. Setup
+
+## 3.1 Visual Studio Code
+
+## 3.2 Github
+Github setup instructions
+
+## 3.3 AWS
+
+### 3.3.1 AWS Elastic Beanstalk
+
+## 3.4 Docker
+
+## 3.5 Go
+
+## 3.6 NodeJS
+
+## 3.7 ReactJS
