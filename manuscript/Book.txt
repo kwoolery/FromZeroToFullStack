@@ -3,6 +3,7 @@ chapter2-theproject.txt
 chapter2.1-thefrontend.txt
 chapter2.2-thebackend.txt
 chapter2.3-thedatastore.txt
+chpater2.4-bringingitalltogether.txt
 chapter3-theecosystem.txt
 chapter3.1-vscode.txt
 chapter3.2-github.txt
@@ -30,4 +31,6 @@ chapter6.3-filesystemstructure.txt
 chapter6.4-staticfiles.txt
 chapter6.5-templatefiles.txt
 chapter6.6-gorouter.txt
+chapter7-buildingthedatastore.txt
+chapter7.1-datastorefundamentals.txt
 
