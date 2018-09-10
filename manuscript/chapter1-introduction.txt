@@ -1,22 +1,3 @@
 # 1. Introduction
 
-## 1.1 What is Full Stack?
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit convallis dapibus. Vestibulum eleifend arcu in leo varius ultricies. Nunc sed congue quam, at mollis risus. Ut felis elit, blandit vitae dapibus ac, sollicitudin id felis. Nullam rutrum dui non aliquet suscipit. Aliquam erat volutpat. Donec id aliquet elit, non lobortis est. Nunc volutpat arcu vel pretium elementum. Nam vitae gravida augue. Sed ornare nisi in mi vestibulum imperdiet ac eu lorem. Duis et cursus urna. Etiam tempus, eros ac imperdiet euismod, dolor mi fringilla metus, nec vestibulum est sem et elit. Proin porttitor purus et egestas malesuada. Nunc ipsum libero, vehicula ut cursus at, molestie eu felis.
-
-Curabitur commodo dapibus tristique. Cras tempus ac sapien ut cursus. Pellentesque malesuada vel diam vitae maximus. Nunc efficitur ultricies augue, eu porta risus varius ac. Aliquam erat volutpat. Integer placerat, sem in convallis faucibus, tellus metus lacinia eros, quis lobortis metus justo nec odio. Donec ac iaculis massa. Phasellus non nibh sollicitudin ex elementum dignissim ac sit amet orci. Quisque sem est, vestibulum ac aliquet id, sollicitudin vel ante. Praesent pulvinar odio risus. Sed malesuada, lacus sit amet faucibus feugiat, nibh turpis faucibus leo, sit amet tempor lacus orci viverra velit. Etiam in tristique turpis. Aliquam faucibus mi id aliquam rhoncus. Ut sem urna, lobortis id libero nec, dignissim suscipit tortor. Maecenas ullamcorper nec turpis eget porttitor. Mauris varius, nibh et lobortis euismod, nisl urna laoreet lectus, vitae venenatis odio diam vel ligula.
-
-Nam sem nisi, hendrerit quis ultrices et, pharetra eu nunc. Nunc ac mauris enim. Phasellus ac ullamcorper leo. Duis porttitor lacus eget urna venenatis ullamcorper. Cras sit amet lectus consectetur, semper elit nec, fringilla purus. Curabitur at lacinia libero, vitae dignissim quam. Vestibulum commodo, augue rhoncus hendrerit hendrerit, quam risus pharetra dolor, id pharetra nisi odio vel dui. Phasellus feugiat, leo at porttitor porttitor, turpis eros fringilla eros, in consequat velit enim ut arcu. Duis dolor nulla, laoreet quis nunc id, ornare vehicula tortor. Duis ac sem pretium, faucibus tellus vitae, varius massa. Morbi ultrices, odio sed lobortis accumsan, mi mi viverra sem, sit amet fermentum neque enim vel massa. Donec ultricies luctus orci sed placerat. Nullam quis enim et metus interdum finibus semper eget enim. Curabitur mauris dui, euismod quis ex nec, cursus tempus lectus. Fusce vulputate lacus sem, vel molestie orci convallis id. Sed auctor leo et commodo dictum.
-
-Nam arcu lectus, pellentesque vitae nulla ut, aliquet sollicitudin urna. Vestibulum pretium ultrices odio, nec ornare neque molestie sit amet. Cras at sapien in tellus placerat rhoncus. Nulla ut vehicula orci. Praesent ultrices faucibus leo, non auctor tellus tempus sit amet. Mauris fermentum consequat odio, eu volutpat diam condimentum id. Pellentesque sollicitudin arcu ipsum, vitae scelerisque nisl posuere sit amet. Curabitur ut nisi aliquam, placerat ligula sed, convallis dui. Proin in faucibus nisl. Proin semper urna eget ante eleifend, ac rhoncus augue bibendum.
-
-Nunc vulputate, erat at gravida aliquam, est tellus lacinia diam, laoreet viverra nunc ipsum sed dolor. Ut felis urna, lobortis vel pretium ultricies, venenatis sit amet metus. Pellentesque metus massa, imperdiet ut condimentum a, rutrum a orci. Pellentesque diam augue, tempus non pharetra a, eleifend vitae eros. Duis id dolor gravida, feugiat erat eu, consequat odio. Donec ultricies pharetra sapien, in finibus felis tristique et. Suspendisse eget diam sem. Mauris rutrum nec lectus sed hendrerit. Nam aliquam odio quis mi consequat, at condimentum odio sodales. Praesent mollis magna augue.
-
-## 1.2 Motivations for this Book
-
-## 1.3 Project Based Approach
-
-## 1.4 Reasons for Project Technology Choices
-
-## 1.5 Background of Technology Choices
-
-## 1.6 Conventions
+What is a full stack?

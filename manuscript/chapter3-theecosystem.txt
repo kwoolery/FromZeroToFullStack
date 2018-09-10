@@ -18,3 +18,5 @@ Github setup instructions
 ## 3.7 NodeJS
 
 ## 3.8 ReactJS
+
+## 3.9 Selenium for Go
