@@ -20,11 +20,12 @@ chapter3.7-nodejs.txt
 chapter3.8-react.txt
 chapter3.9-seleniumforgo.txt
 chapter4-thedesign.txt
-chapter4.1-frontenddesign.txt
-chapter4.2-backenddesign.txt
-chapter4.3-datastoredesign.txt
-chapter4.4-protocoldesign.txt
-chapter4.5-testdesign-tdd.txt
+chapter4.1-usecases.txt
+chapter4.2-testdesign-tdd.txt
+chapter4.3-frontenddesign.txt
+chapter4.4-backenddesign.txt
+chapter4.5-datastoredesign.txt
+chapter4.6-protocoldesign.txt
 chapter5-beginningthefrontendbuild.txt
 chapter5.1-javascriptfundamentals.txt
 chapter5.2-ecmascript6fundamentals.txt
@@ -40,4 +41,6 @@ chapter6.5-templatefiles.txt
 chapter6.6-gorouter.txt
 chapter7-beginningthedatastorebuild.txt
 chapter7.1-datastorefundamentals.txt
+chapter8-implementation.txt
+chapter9-deployment.txt
 
