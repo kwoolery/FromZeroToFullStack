@@ -18,3 +18,5 @@ Nunc vulputate, erat at gravida aliquam, est tellus lacinia diam, laoreet viverr
 ## 1.4 Reasons for Project Technology Choices
 
 ## 1.5 Background of Technology Choices
+
+## 1.6 Conventions
