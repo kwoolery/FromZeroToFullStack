@@ -1,3 +1,14 @@
 chapter1-introduction.txt
 chapter2-theproject.txt
-chapter3-setup.txt
+chapter2.1-thebackend.txt
+chapter2.2-thefrontend.txt
+chapter2.3-thedatastore.txt
+chapter3-ecosystem.txt
+chapter3.1-vscode.txt
+chapter3.2-github.txt
+chapter3.3-travisci.txt
+chapter3.4-aws.txt
+chapter3.5-docker.txt
+chapter3.6-go.txt
+chapter3.7-nodejs.txt
+chapter3.8-react.txt
