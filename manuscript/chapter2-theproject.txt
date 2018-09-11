@@ -1,1 +1,19 @@
 # 2. The Project
+
+Determine what the project is going to be.
+
+* Trivia server
+* Coffee Shop Ranking
+* Slot Machine
+* Chat Application
+
+
+```go
+package main
+
+import fmt
+
+func main() {
+    fmt.Println("Testing")
+}
+```

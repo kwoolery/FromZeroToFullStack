@@ -19,7 +19,7 @@ chapter3.6-go.txt
 chapter3.7-nodejs.txt
 chapter3.8-react.txt
 chapter3.9-redux.txt
-chapter3.10-firebase.txt
+chapter3.10-authentication.txt
 chapter3.11-seleniumforgo.txt
 chapter4-thedesign.txt
 chapter4.1-usecases.txt
