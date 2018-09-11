@@ -19,4 +19,6 @@ Github setup instructions
 
 ## 3.8 ReactJS
 
-## 3.9 Selenium for Go
+## 3.9 Redux
+
+## 3.10 Selenium for Go
