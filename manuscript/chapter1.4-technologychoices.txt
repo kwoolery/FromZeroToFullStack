@@ -1,1 +1,5 @@
 # 1.4 Technology Choices
+
+Why use Go, and React, and not something else? 
+
+There are so many choices for technology today, that no matter which you choose, you run the risk of offending someone who has strong opinions one way or another. Generally, in my opinion, it's better to stay somewhat technology agnostic, and use the tools that are best for the job at hand, but every project requires some choice to be made. 

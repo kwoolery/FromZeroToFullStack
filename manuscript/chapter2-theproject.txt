@@ -3,9 +3,39 @@
 Determine what the project is going to be.
 
 * Trivia server
+    - Pros
+        - Already have code for this
+        - Highlights a bunch of the functionality that are necessary to build out an app
+        - Allows for users to create their own experience
+    - Cons
+        - Not everyone likes Trivia
+        - Not really a practical Application
+
 * Coffee Shop Ranking
+    - Pros
+        - Coffee is cool, especially for developers
+        - Highlights most of the functionality that is necessary to build an app
+        - Allows for opportunity to interact with a 3rd party app
+        - Uses Location Based Services
+        - Can be used for different types of business without much work
+    - Cons
+        - Not really ideal for a real time communication component
+
 * Slot Machine
+    - Pros
+        - Fun
+        - Managing Data that gets shared among users
+    - Cons
+        - Not practical as a web application, really more focused on client side
+        
 * Chat Application
+    - Pros
+        - Has a lot of opportunity to show off features of a real time app
+        - People like communication
+    - Cons
+        - Cliche application for development tutorials
+        - So many chat options in the world today, it sort of feels overdone, and impractical
+
 
 
 ```go
