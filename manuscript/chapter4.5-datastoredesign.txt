@@ -1,4 +1,4 @@
-# 4.3 Datastore Design
+# 4.5 Datastore Design
 
 ## 4.3.1 SQL vs. NoSQL
 

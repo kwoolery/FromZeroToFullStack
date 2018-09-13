@@ -1,4 +1,4 @@
-# 4.4 Protocol Design
+# 4.6 Protocol Design
 
 ## 4.4.1 REST vs. SOAP
 
