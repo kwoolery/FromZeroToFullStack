@@ -27,7 +27,7 @@ Determine what the project is going to be.
         - Managing Data that gets shared among users
     - Cons
         - Not practical as a web application, really more focused on client side
-        
+
 * Chat Application
     - Pros
         - Has a lot of opportunity to show off features of a real time app
@@ -36,6 +36,25 @@ Determine what the project is going to be.
         - Cliche application for development tutorials
         - So many chat options in the world today, it sort of feels overdone, and impractical
 
+### Coffee Shop Ranking
+
+What we need:
+
+* Login Page
+* Login Failure Page
+* Signup Page
+* Local Signup Confirmation
+* Facebook Signup Confirmation
+* Facebook to Local Signup Save 
+* Google Signup Confirmation
+* Google to Local Signup Save
+* Landing Page After Login
+* Map Page
+* Coffee Shop Listing Page
+* Coffee Shop Menu Page
+* Coffee Shop Comment Page
+* Coffee Shop Add Comment Page
+* Chat Page
 
 
 ```go
