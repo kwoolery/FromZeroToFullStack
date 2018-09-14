@@ -5,7 +5,7 @@ Marvel app for quick prototyping
 ### 4.2.1 Mobile App and Web Pages
 
 * Sign In Page
-{align: "left", wrap: "true", height: "33", width: "33"}
+{width=33%,float=left}
 ![Sign In Page](images/signin.png)
 
 * Sign In Fail
