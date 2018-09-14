@@ -1,4 +1,4 @@
-# 1.4 Technology Choices
+## 1.4 Technology Choices
 
 Why use Go, and React, and not something else? 
 

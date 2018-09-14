@@ -1,7 +1,7 @@
-# 3.1 Visual Studio Code
+## 3.1 Visual Studio Code
 
-## 3.1.1 Installation
+### 3.1.1 Installation
 
-## 3.1.2 Customization
+### 3.1.2 Customization
 
-## 3.1.3 Plugin Installation
+### 3.1.3 Plugin Installation

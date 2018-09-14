@@ -1,3 +1,3 @@
-# 1.3 Project Based Approach
+## 1.3 Project Based Approach
 
 Why the project based approach? There are many resources in the world to allow the most dedicated developers to find the solutions they're looking for, however, it's rare to see an entire end-to-end guide for what the real world requires to design, build, and deploy projects. 

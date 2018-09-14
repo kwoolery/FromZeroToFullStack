@@ -51,6 +51,7 @@ What we need:
 * Landing Page After Login
 * Map Page
 * Coffee Shop Listing Page
+* Coffee Shop Detail Page
 * Coffee Shop Menu Page
 * Coffee Shop Comment Page
 * Coffee Shop Add Comment Page

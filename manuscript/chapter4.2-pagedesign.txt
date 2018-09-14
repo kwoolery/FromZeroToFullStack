@@ -1,8 +1,8 @@
-# 4.2 Page Design
+## 4.2 Page Design
 
 Marvel app for quick prototyping
 
-## 4.2.1 Mobile App and Web Pages
+### 4.2.1 Mobile App and Web Pages
 
 * Sign In Page
 {align: "left", wrap: "true", height: "33", width: "33"}

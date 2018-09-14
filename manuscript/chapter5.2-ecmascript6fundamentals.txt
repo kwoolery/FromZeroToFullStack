@@ -1,1 +1,1 @@
-# 5.2 ECMA 6 Fundamentals
+## 5.2 ECMA 6 Fundamentals

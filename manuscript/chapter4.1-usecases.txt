@@ -1,13 +1,13 @@
-# 4.1 Use Cases
+## 4.1 Use Cases
 
-# 4.1.1 Connect Login to FB/Google/LinkedIn
+### 4.1.1 Connect Login to FB/Google/LinkedIn
 
-# 4.1.2 RPC Communication Channel between Client and Server (REST w/ ProtoBuf or JSON)
+### 4.1.2 RPC Communication Channel between Client and Server (REST w/ ProtoBuf or JSON)
 
-# 4.1.3 3rd Party API Integration
+### 4.1.3 3rd Party API Integration
 
-# 4.1.4 WebSockets for Real-Time Messaging and Communication
+### 4.1.4 WebSockets for Real-Time Messaging and Communication
 
-# 4.1.5 State Updates in React using Redux?
+### 4.1.5 State Updates in React using Redux?
 
-# 4.1.6 
+### 4.1.6 
