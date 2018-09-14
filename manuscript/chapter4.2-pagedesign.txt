@@ -1,3 +1,31 @@
 # 4.2 Page Design
 
 Marvel app for quick prototyping
+
+## 4.2.1 Mobile App and Web Pages
+
+* Sign In Page
+![Sign In Page](images/signin.png)
+
+* Sign In Fail
+* Forgot Password
+* Sign Up Page
+* Sign Up Confirmation
+* Facebook Confirmation
+* Google Confirmation
+* Landing
+* Search Page
+* Listing 
+* Listing Map
+* Details
+* Comments
+* Add Comment
+* Menu
+* Menu Detail
+* Classified Listings
+* Add Classified
+* Chat
+* Images
+* Image Information
+* Add Image
+* User Settings
