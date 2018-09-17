@@ -10,9 +10,32 @@ I'll describe the installation process, customization, and plugins necessary to 
 
 Download the appropriate installer for your operating systemfrom https://code.visualstudio.com/Download and follow the instructions to install Visual Studio Code. 
 
-For Mac, you can unzip the downloaded file, and drag the Visual Studio Code application directly into the Applications folder. 
+{height=20%,float=center}
+![Visual Studio Code Download](images/download-vs-code.png)
 
-For Windows
+For Mac, you unzip the downloaded file, and drag the Visual Studio Code application directly into the Applications folder. 
+
+For Windows, you double-click on the downloaded VSCodeUserSetup file, and follow the installation wizard instructions. Typically, the default options should work for most people.
+
+For Ubuntu, or Debian, there are multiple ways to install the downloaded deb file. 
+
+* From the directoy you downloaded the file to, run the following commands, for example, if the file you downloaded is called code_1.27.2-1536736588_amd64.deb, the you can run:
+
+```bash
+    sudo dpkg -i ./code_1.27.2-1536736588_amd64.deb && sudo apt-get install -f .
+```
+ 
+ or 
+
+ ```bash
+    sudo apt install ./code_1.27.2-1536736588_amd64.deb
+```
+
+* From the GUI, find the deb file that was downloaded, and double-click from the desktop to instantiate the default package manager, typically Synaptic Package Manager for Ubuntu.
+
+Once installed, you should open Visual Studio Code, and see the following screen:
+
+
 
 ### 3.1.2 Customization
 
