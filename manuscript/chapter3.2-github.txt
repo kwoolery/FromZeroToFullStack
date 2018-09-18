@@ -10,6 +10,16 @@ Go to the Github sign up page at https://github.com/join?source=login
 
 /// USE GIT AUTOCONFIG PLUGIN - FIGURE OUT HOW TO PUSH WITH MULTIPLE GIT ACCOUNTS
 
+If there's a problem pushing to github because you get a permission denied error. Try resetting your git remote origin by running the following:
+
+git remote remove origin
+
+git remote add origin  https://truvukevin@github.com/truvukevin/coffeeshopranker.git
+
+Where truvukevin is the username you created the repository with. When you push to the repository, you'll be asked for your password. 
+
+
+
 
 ### Importing Project into Visual Studio code
 New Visual Studio Code window -> Start -> Open folder
