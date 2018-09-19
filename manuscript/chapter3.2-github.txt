@@ -29,7 +29,7 @@ View -> Command Palette -> Type 'Git: Clone' -> Enter
 Enter the Repository URL from Github 
 https://github.com/truvukevin/coffeeshopranker.git
 
-Creating your first file. 
+### Creating your first file and syncing on Github 
 
 Click on the add file icon, and name the file README.md. This uses a special type of syntax called Markdown that can be used format the pages for rendering on Github. The README.md file is the file displayed prominently on your Github repository landing page, typically basic documentation, and links to examples go in this section. For now, we'll just create basic placeholder text. 
 
@@ -43,7 +43,32 @@ The very basic example above will just format the 'Coffee Shop Ranker' as a head
 
 Once you update the README.md file, you should see a little blue numeric indicator on the Version Control icon in the left sidebar of Visual Studio Code. This number indicates how many files differ from what is currently checked into the active Git branch. Clicking on this icon takes you to a list of files that have been changed. If the list looks good, in this case you should see README.md in the list, add a message, and click the checkmark above the message. This will save the file in the local master branch, or whichever branch is currently selected. Once the file is saved locally, you should get an indicator on the bottom left corner next to the "master" that indicates that there are changes ready to push up to the remote repository, in this case Github. If you click on the up arrow, the file will be synced to the remote repository.
 
-As you can see, the file you just changed has been uploaded, and the markdown has been formatted. You should see something similar to figure 3.1.
+If there's a problem pushing to github because you get a permission denied error. Try resetting your git remote origin by running the following:
+
+```bash
+git remote remove origin
+
+git remote add origin  https://truvukevin@github.com/truvukevin/coffeeshopranker.git
+```
+
+Where truvukevin is the username you created the repository with. When you push to the repository, you'll be asked for your password in Visual Studio Code. 
+
+If all is successful, and you navigate to your github repository homepage, you can see the file you just changed has been uploaded, and the markdown has been formatted. You should see something similar to figure <nnn>.
+
+### Making a Mistake and Reverting
+
+Add the following to end of the README.md file.
+
+```
+This is a mistake I don't really want. 
+```
+
+Save the file, then check the file in to your local repository, and add a message that identifies this change, and push the file to the Github master branch as desribed in the previous section. Verify that the change has been made and is up on Github.
+
+Now, by either right clicking on the file, and choosing Git: View File History, or bringing up the Command Palette and typing Git: View File History, you'll invoke the Visual Studio Code Git History plugin, and you should get a tab with a detailed history of the file in question. 
+
+Find the most recent commit. You'll see a blue button on the righthand side of the commit that has a clipboard icon, a litte circle with two lines coming out, and the first 7 characters of the commit ID. If you click on the middle icon, you'll get a set of choices. You can choose to revert this commit, and go back to the state of file from the previous commit, or you can find the commit in the list you want go to, and revert to a specific version of the file. When you choose to revert, Git History automatically takes care of checking the file in to your local repository, and creating a title called "Revert 'Previous Commit Message'". Once your local repository is up to date, you can push the changes to master, and verify that the mistake is no longer part of the file. 
+
 
 
 
