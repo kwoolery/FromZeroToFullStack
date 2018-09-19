@@ -1,6 +1,6 @@
 ## 3.2 Github
 
-Github is a web-based hosting service used for version control using Git, primarily for code based projects, but virtually anything can be version controlled on Github, in fact, this book, along with the accompanying code is being managed in Github. Git itself is a version control system developed by Linus Torvalds to manage a distributed team working on the Linux Operating System. Prior to Git, most version control systems were centralized around a common master repository, whereas Git is a peer-to-peer version control system where an equal copy of the repository is accessible to anyone, however, it is usually managed by either an individual or a group, and changes are approved via pull requests from another individuals version repository. 
+Github is a web-based hosting service used for version control using Git, primarily for code based projects, but virtually anything can be version controlled on Github, in fact, this book, along with the accompanying code is being managed in Github. Git itself is a version control system developed by Linus Torvalds to manage a distributed team working on the Linux Operating System. Prior to Git, most version control systems were centralized around a common master repository, whereas Git is a peer-to-peer version control system where an equal copy of the repository is accessible to anyone, however, it is usually managed by either an individual or a group, and changes are approved via pull requests from another individuals version repository. If you want to know more about Git, you can check out the appendix for a list of common Git commands.
 
 Github allows for a central storage location of the repository while still maintaining Git's peer-to-peer ethos. Github has become the repository of choice, and is used by many external services to sync, and distribute updated code. Github is more than just a centralized repository though, it's a code base management system as well, allowing functional owners to manage issues, patching, requests for changes, and documentation. 
 
@@ -19,8 +19,6 @@ git remote add origin  https://truvukevin@github.com/truvukevin/coffeeshopranker
 Where truvukevin is the username you created the repository with. When you push to the repository, you'll be asked for your password. 
 
 
-
-
 ### Importing Project into Visual Studio code
 New Visual Studio Code window -> Start -> Open folder
 
@@ -30,3 +28,22 @@ View -> Command Palette -> Type 'Git: Clone' -> Enter
 
 Enter the Repository URL from Github 
 https://github.com/truvukevin/coffeeshopranker.git
+
+Creating your first file. 
+
+Click on the add file icon, and name the file README.md. This uses a special type of syntax called Markdown that can be used format the pages for rendering on Github. The README.md file is the file displayed prominently on your Github repository landing page, typically basic documentation, and links to examples go in this section. For now, we'll just create basic placeholder text. 
+
+```
+## Coffee Shop Ranker
+
+First commit of README.md file.
+```
+
+The very basic example above will just format the 'Coffee Shop Ranker' as a header with larger, bold font, while the second line will be formatted as plain text. Please see Appendix D for a Markdown reference.
+
+Once you update the README.md file, you should see a little blue numeric indicator on the Version Control icon in the left sidebar of Visual Studio Code. This number indicates how many files differ from what is currently checked into the active Git branch. Clicking on this icon takes you to a list of files that have been changed. If the list looks good, in this case you should see README.md in the list, add a message, and click the checkmark above the message. This will save the file in the local master branch, or whichever branch is currently selected. Once the file is saved locally, you should get an indicator on the bottom left corner next to the "master" that indicates that there are changes ready to push up to the remote repository, in this case Github. If you click on the up arrow, the file will be synced to the remote repository.
+
+As you can see, the file you just changed has been uploaded, and the markdown has been formatted. You should see something similar to figure 3.1.
+
+
+

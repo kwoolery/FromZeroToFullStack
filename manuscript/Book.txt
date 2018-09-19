@@ -49,4 +49,9 @@ chapter8-implementation.txt
 chapter9-deployment.txt
 chapter10-testing.txt
 chapter11-debugging.txt
+appendixA-vscodekeys.txt
+appendixB-gitcommand.txt
+appendixC-githubfunctions.txt
+appendixD-markdown.txt
+
 
