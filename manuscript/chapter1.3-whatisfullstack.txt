@@ -1,3 +1,3 @@
-## 1.1 What is a Full Stack Engineer
+## 1.2 What is a Full Stack Engineer
 
  Before we talk about what a full stack engineer is, we should talk about the basic architecture for web applications. Most modern web application architectures consist of 3 tiers, a front-end, a back-end, and a datastore. In order to be considered a full-stack engineer, you must have a level of competence in all tiers. In addition to understanding the interaction between the 3 tiers, a modern full stack engineer must understand the complete Software Development Lifecycle, from ingesting designs and specification from Product Managers, to working with Continuous Integration platforms for deployment, Testing Frameworks to insure a level of quality, and using Cloud Services to host and manage the deployed applications. 
