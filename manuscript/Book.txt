@@ -1,9 +1,10 @@
 chapter1-introduction.txt
 chapter1.1-aboutme.txt
 chapter1.2-motivations.txt
-chapter1.3-projectbasedapproach.txt
-chapter1.4-technologychoices.txt
-chapter1.5-conventions.txt
+chapter1.3-whatisfullstack.txt
+chapter1.4-projectbasedapproach.txt
+chapter1.5-technologychoices.txt
+chapter1.6-conventions.txt
 chapter2-theproject.txt
 chapter2.1-thefrontend.txt
 chapter2.2-thebackend.txt

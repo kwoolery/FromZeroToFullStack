@@ -1,3 +1,7 @@
 # 1. Introduction
 
-What is a full stack?
+Welcome to From Zero to Full Stack: A Project Based Approach with React and Go. I'm excited to take this journey with you. You'll be introduced to every phase in the Software Development Lifecycle. You'll start with a bare bones design, and some basic requirements, and you'll finish with a fully deployed server application running in the cloud, with client applications running on the web, on mobile, and in a mobile app on iOS and Android. The project you'll be working on will be Coffee Shop Ranking Application, where you'll populate your application data from the Google Places API, use Facebook's React JS, and React Native to build out the various front end versions, use Google's popular language, Go, to build out a fast, scalable back end, and the NoSQL database MongoDB as your primary datastore. You'll be using Travis-CI for your Continuous Integration platform, and AWS as your Cloud Provider. 
+
+Along the way, you'll encounter, and tackle some real world challenges of being a full-stack engineer, who in the end, is ultimately responsible for understanding all of the various components of the application. You'll learn troubleshooting techniques on all of the various components, and how to quickly track down and fix bugs. 
+
+If you're patient, and are willing to work through the various parts, you'll be happy that you are able to create a fully functioning, portfolio application that can help you move your career to the next level.
