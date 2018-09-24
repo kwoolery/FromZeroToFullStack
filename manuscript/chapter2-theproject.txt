@@ -8,9 +8,10 @@ The project we're going to be building is a coffee shop ranker application that 
 We need to allow new users to signup in order to create unique identies within our application. We'll do this by allowing them to use either their Facebook, or Google user information. This will require integration with the Facebook and Google identity systems. If a user signs up with Facebook or Google, we'll create an internal record to map our user ID to the connected Facebook or Google ID. In case a user decides not to link their Facebook or Google account, we'll also allow users to signup directly with their email addresses. The signup process will capture basic information, such as age, gender, and their preferences for coffee shops and coffee. 
 
 #### Login
-We need to allow users to login with their email, or with either their Facebook or Google credentials. This is a simple interface that presents the user with an input box for their username or email and a password box. Below the input boxes, there will be a button for signing in with Facebook, and another for signing in with Google.   
+We need to allow users to login with their email, or with either their Facebook or Google credentials. This is a simple interface that presents the user with an input box for their username or email and a password box. Below the input boxes, there will be a button for signing in with Facebook, and another for signing in with Google. Once the user chooses a login method, we'll either validate internally, or pass off authentication to Facebook or Google.   
 
 #### Search Coffee Shops
+We need to allow users to search for coffee shops, either in their area, or in an arbitrary location. This requires use to identify where the user is currently located. The user can search on basic critiera such as the coffee shop name, street name, coffee shop type, size, and menu itms. The returning list will be ordered by ranking by default. The search will use a local representation of the coffee shop first, and it will attempt to find new coffee shops by criteria from Google Places API.
 
 #### Coffee Shop Details
 
