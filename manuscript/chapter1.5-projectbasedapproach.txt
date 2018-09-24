@@ -1,3 +1,7 @@
 ## 1.5 Project Based Approach
 
-Why the project based approach? There are many resources in the world to allow the most dedicated developers to find the solutions they're looking for, however, it's rare to see an entire end-to-end guide for what the real world requires to design, build, and deploy projects. 
+In order to fully appreciate what it means to be a full-stack engineer, it makes sense to look at each layer in the stack in depth, and instead of using abstract concepts that don't always produce a cohesive output, the project-based approach gives us an end goal that would be expected in a real-world environment. There are many resources in the world to allow the most dedicated developers to find the solutions they're looking for to most problems they will encounter in the software development lifecycle, however, it's rare to see an entire end-to-end guide for what the real world requires to design, build, and deploy projects. 
+
+You can use the scaffolding you learn in this book to support other projects with similar architectures without having to re-invent the wheel every time. Most of the concepts in this book can be translated to many different application types, including front-facing consumer applications, internal business applications, public REST APIs, and even games. The DevOps portion of the project can also be modified and applied to a developers needs. 
+
+Once you've mastered the concepts covered in the book, and created a complete, end-to-end project, you can use the application, and code you produced to demonstrate a level of competency for future employment opportunities, or to create your own product to launch.  

@@ -1,69 +1,35 @@
 # 2. The Project
 
-Determine what the project is going to be.
+The project we're going to be building is a coffee shop ranker application that allows users to sign-up, login, search for coffee shops, read the details of the coffee shop, review the coffee shop itself, review individual menu items, leave comments, post to local classified section, upload images, and initiate chat with others that are currently in the coffee shop. We'll go over each feature in more detail below.  
 
-* Trivia server
-    - Pros
-        - Already have code for this
-        - Highlights a bunch of the functionality that are necessary to build out an app
-        - Allows for users to create their own experience
-    - Cons
-        - Not everyone likes Trivia
-        - Not really a practical Application
+### Feature Requirements
 
-* Coffee Shop Ranking
-    - Pros
-        - Coffee is cool, especially for developers
-        - Highlights most of the functionality that is necessary to build an app
-        - Allows for opportunity to interact with a 3rd party app
-        - Uses Location Based Services
-        - Can be used for different types of business without much work
-    - Cons
-        - Not really ideal for a real time communication component
+#### Signup
+We need to allow new users to signup in order to create unique identies within our application. We'll do this by allowing them to use either their Facebook, or Google user information. This will require integration with the Facebook and Google identity systems. If a user signs up with Facebook or Google, we'll create an internal record to map our user ID to the connected Facebook or Google ID. In case a user decides not to link their Facebook or Google account, we'll also allow users to signup directly with their email addresses. The signup process will capture basic information, such as age, gender, and their preferences for coffee shops and coffee. 
 
-* Slot Machine
-    - Pros
-        - Fun
-        - Managing Data that gets shared among users
-    - Cons
-        - Not practical as a web application, really more focused on client side
+#### Login
+We need to allow users to login with their email, or with either their Facebook or Google credentials. This is a simple interface that presents the user with an input box for their username or email and a password box. Below the input boxes, there will be a button for signing in with Facebook, and another for signing in with Google.   
 
-* Chat Application
-    - Pros
-        - Has a lot of opportunity to show off features of a real time app
-        - People like communication
-    - Cons
-        - Cliche application for development tutorials
-        - So many chat options in the world today, it sort of feels overdone, and impractical
+#### Search Coffee Shops
 
-### Coffee Shop Ranking
+#### Coffee Shop Details
 
-What we need:
+#### Coffee Shop Review
 
-* Login Page
-* Login Failure Page
-* Signup Page
-* Local Signup Confirmation
-* Facebook Signup Confirmation
-* Facebook to Local Signup Save 
-* Google Signup Confirmation
-* Google to Local Signup Save
-* Landing Page After Login
-* Map Page
-* Coffee Shop Listing Page
-* Coffee Shop Detail Page
-* Coffee Shop Menu Page
-* Coffee Shop Comment Page
-* Coffee Shop Add Comment Page
-* Chat Page
+#### Coffee Shop Comments
 
+#### Coffee Shop Image Upload
 
-```go
-package main
+#### Menu Items List
 
-import fmt
+#### Menu Item Details
 
-func main() {
-    fmt.Println("Testing")
-}
-```
+#### Menu Item Reviews
+
+#### Menu Item Comments
+
+#### Menu Item Image Upload
+
+#### Classified Section
+
+#### Local Chat
