@@ -1,4 +1,4 @@
-# A.2 Visual Studio Shortcut Keys Windows
+# A.2 Visual Studio Code Shortcut Keys - Windows
 *From https://code.visualstudio.com/docs/getstarted/keybindings*
 
 

@@ -1,4 +1,4 @@
-# A.1 Visual Studio Shortcut Keys macOS
+# A.1 Visual Studio Code Shortcut Keys - macOS
 *From https://code.visualstudio.com/docs/getstarted/keybindings*
 
 ### General

@@ -1,4 +1,4 @@
-# A.2 Visual Studio Shortcut Keys Linux
+# A.2 Visual Studio Code Shortcut Keys - Linux
 *From https://code.visualstudio.com/docs/getstarted/keybindings*
 
 
