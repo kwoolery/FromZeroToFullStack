@@ -5,7 +5,7 @@ chapter1.3-whatisfullstack.txt
 chapter1.4-projectbasedapproach.txt
 chapter1.5-technologychoices.txt
 chapter1.6-conventions.txt
-chapter2-theecosystem.txt
+chapter2-thedevenvironment.txt
 chapter2.1-vscode.txt
 chapter2.2-github.txt
 chapter2.3-travisci.txt
