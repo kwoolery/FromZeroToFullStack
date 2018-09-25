@@ -2,138 +2,253 @@
 *From https://code.visualstudio.com/docs/getstarted/keybindings*
 
 ## General
-&#2000;&#2318;P, F1 Show Command Palette
-&#2318;P Quick Open, Go to File…
-&#2000;&#2318;N New window/instance
-&#2318;W Close window/instance
-&#2318;, User Settings
-&#2318;K &#2318;S Keyboard Shortcuts
+\u2000; \u2318;P, F1 Show Command Palette
+
+\u2318;P Quick Open, Go to File…
+
+\u2000;\u2318;N New window/instance
+
+\u2318;W Close window/instance
+
+\u2318;, User Settings
+
+\u2318;K \u2318;S Keyboard Shortcuts
 
 ## Basic editing
-&#2318;X Cut line (empty selection)
-&#2318;C Copy line (empty selection)
-&#2325;↓ / &#2325;↑ Move line down/up
-&#2000;&#2325;↓ / &#2000;&#2325;↑ Copy line down/up
-&#2000;&#2318;K Delete line
-&#2318;Enter / &#2000;&#2318;Enter Insert line below/above
-&#2000;&#2318;\ Jump to matching bracket
-&#2318;] / &#2318;[ Indent/outdent line
+\u2318;X Cut line (empty selection)
+
+\u2318;C Copy line (empty selection)
+
+\u2325;\u2193; / \u2325;\u2191; Move line down/up
+
+\u2000;\u2325;\u2193; / \u2000;\u2325;\u2191; Copy line down/up
+
+\u2000;\u2318;K Delete line
+
+\u2318;Enter / \u2000;\u2318;Enter Insert line below/above
+
+\u2000;\u2318;\ Jump to matching bracket
+
+\u2318;] / \u2318;[ Indent/outdent line
+
 Home / End Go to beginning/end of line
-&#2318;↑ / &#2318;↓ Go to beginning/end of file
+
+\u2318;\u2191; / \u2318;\u2193; Go to beginning/end of file
+
 ^PgUp / ^PgDn Scroll line up/down
-&#2318;PgUp /&#2318;PgDn Scroll page up/down
-&#2325;&#2318;[ / &#2325;&#2318;] Fold/unfold region
-&#2318;K &#2318;[ / &#2318;K &#2318;] Fold/unfold all subregions
-&#2318;K &#2318;0 / &#2318;K &#2318;J Fold/unfold all regions
-&#2318;K &#2318;C Add line comment
-&#2318;K &#2318;U Remove line comment
-&#2318;/ Toggle line comment
-&#2000;&#2325;A Toggle block comment
-&#2325;Z Toggle word wrap
+
+
+\u2318;PgUp /\u2318;PgDn Scroll page up/down
+
+\u2325;\u2318;[ / \u2325;\u2318;] Fold/unfold region
+
+\u2318;K \u2318;[ / \u2318;K \u2318;] Fold/unfold all subregions
+
+\u2318;K \u2318;0 / \u2318;K \u2318;J Fold/unfold all regions
+
+\u2318;K \u2318;C Add line comment
+
+\u2318;K \u2318;U Remove line comment
+
+\u2318;/ Toggle line comment
+
+\u2000;\u2325;A Toggle block comment
+
+\u2325;Z Toggle word wrap
 
 ## Multi-cursor and selection
-&#2325; + click Insert cursor
-&#2325;&#2318;↑ Insert cursor above
-&#2325;&#2318;↓ Insert cursor below
-&#2318;U Undo last cursor operation
-&#2000;&#2325;I Insert cursor at end of each line selected
-&#2318;I Select current line
-&#2000;&#2318;L Select all occurrences of current selection
-&#2318;F2 Select all occurrences of current word
-^&#2000;&#2318;→ / ← Expand / shrink selection
-&#2000;&#2325; + drag mouse Column (box) selection
-&#2000;&#2325;&#2318;↑ / ↓ Column (box) selection up/down
-&#2000;&#2325;&#2318;← / → Column (box) selection left/right
-&#2000;&#2325;&#2318;PgUp Column (box) selection page up
-&#2000;&#2325;&#2318;PgDn Column (box) selection page down
 
+\u2325; + click Insert cursor
+
+\u2325;\u2318;\u2191; Insert cursor above
+
+\u2325;\u2318;\u2193; Insert cursor below
+
+\u2318;U Undo last cursor operation
+
+\u2000;\u2325;I Insert cursor at end of each line selected
+
+\u2318;I Select current line
+
+\u2000;\u2318;L Select all occurrences of current selection
+
+\u2318;F2 Select all occurrences of current word
+
+^\u2000;\u2318;→ / ← Expand / shrink selection
+
+\u2000;\u2325; + drag mouse Column (box) selection
+
+\u2000;\u2325;\u2318;\u2191; / \u2193; Column (box) selection up/down
+
+\u2000;\u2325;\u2318;← / → Column (box) selection left/right
+
+\u2000;\u2325;\u2318;PgUp Column (box) selection page up
+
+\u2000;\u2325;\u2318;PgDn Column (box) selection page down
 
 ## Search and replace
-&#2318;F Find
-&#2325;&#2318;F Replace
-&#2318;G / &#2000;&#2318;G Find next/previous
-&#2325;Enter Select all occurrences of Find match
-&#2318;D Add selection to next Find match
-&#2318;K &#2318;D Move last selection to next Find match
+
+\u2318;F Find
+
+\u2325;\u2318;F Replace
+
+\u2318;G / \u2000;\u2318;G Find next/previous
+
+\u2325;Enter Select all occurrences of Find match
+
+\u2318;D Add selection to next Find match
+
+\u2318;K \u2318;D Move last selection to next Find match
+
 
 ## Rich languages editing
+
 ^Space Trigger suggestion
-&#2000;&#2318;Space Trigger parameter hints
-&#2000;&#2325;F Format document
-&#2318;K &#2318;F Format selection
+
+\u2000;\u2318;Space Trigger parameter hints
+
+\u2000;\u2325;F Format document
+
+\u2318;K \u2318;F Format selection
+
 F12 Go to Definition
-&#2325;F12 Peek Definition
-&#2318;K F12 Open Definition to the side
-&#2318;. Quick Fix
-&#2000;F12 Show References
+
+\u2325;F12 Peek Definition
+
+\u2318;K F12 Open Definition to the side
+
+\u2318;. Quick Fix
+
+\u2000;F12 Show References
+
 F2 Rename Symbol
-&#2318;K &#2318;X Trim trailing whitespace
-&#2318;K M Change file language
+
+\u2318;K \u2318;X Trim trailing whitespace
+
+\u2318;K M Change file language
 
 ## Navigation
-&#2318;T Show all Symbols
+
+\u2318;T Show all Symbols
+
 ^G Go to Line...
-&#2318;P Go to File...
-&#2000;&#2318;O Go to Symbol...
-&#2000;&#2318;M Show Problems panel
-F8 / &#2000;F8 Go to next/previous error or warning
-^&#2000;Tab Navigate editor group history
-^- / ^&#2000;- Go back/forward
-^&#2000;M Toggle Tab moves focus
-Editor management
-&#2318;W Close editor
-&#2318;K F Close folder
-&#2318;\ Split editor
-&#2318;1 / &#2318;2 / &#2318;3 Focus into 1
+
+\u2318;P Go to File...
+
+\u2000;\u2318;O Go to Symbol...
+
+\u2000;\u2318;M Show Problems panel
+
+F8 / \u2000;F8 Go to next/previous error or warning
+
+^\u2000;Tab Navigate editor group history
+
+^- / ^\u2000;- Go back/forward
+
+^\u2000;M Toggle Tab moves focus
+
+## Editor management
+
+\u2318;W Close editor
+
+\u2318;K F Close folder
+
+\u2318;\ Split editor
+
+\u2318;1 / \u2318;2 / \u2318;3 Focus into 1
+
 st, 2nd, 3rd editor group
-&#2318;K &#2318;← / &#2318;K &#2318;→ Focus into previous/next editor group
-&#2318;K &#2000;&#2318;← / &#2318;K &#2000;&#2318;→ Move editor left/right
-&#2318;K ← / &#2318;K → Move active editor group
+
+\u2318;K \u2318;← / \u2318;K \u2318;→ Focus into previous/next editor group
+
+\u2318;K \u2000;\u2318;← / \u2318;K \u2000;\u2318;→ Move editor left/right
+
+\u2318;K ← / \u2318;K → Move active editor group
 
 ## File management
-&#2318;N New File
-&#2318;O Open File...
-&#2318;S Save
-&#2000;&#2318;S Save As...
-&#2325;&#2318;S Save All
-&#2318;W Close
-&#2318;K &#2318;W Close All
-&#2000;&#2318;T Reopen closed editor
-&#2318;K Enter Keep preview mode editor open
-^Tab / ^&#2000;Tab Open next / previous
-&#2318;K P Copy path of active file
-&#2318;K R Reveal active file in Explorer
-&#2318;K O Show active file in new window/instance
+
+\u2318;N New File
+
+\u2318;O Open File...
+
+\u2318;S Save
+
+\u2000;\u2318;S Save As...
+
+\u2325;\u2318;S Save All
+
+\u2318;W Close
+
+\u2318;K \u2318;W Close All
+
+\u2000;\u2318;T Reopen closed editor
+
+\u2318;K Enter Keep preview mode editor open
+
+^Tab / ^\u2000;Tab Open next / previous
+
+\u2318;K P Copy path of active file
+
+\u2318;K R Reveal active file in Explorer
+
+\u2318;K O Show active file in new window/instance
 
 ## Display
-^&#2318;F Toggle full screen
-&#2325;&#2318;0 Toggle editor layout (horizontal/vertical)
-&#2318;= / &#2000;&#2318;- Zoom in/out
-&#2318;B Toggle Sidebar visibility
-&#2000;&#2318;E Show Explorer / Toggle focus
-&#2000;&#2318;F Show Search
-^&#2000;G Show Source Control
-&#2000;&#2318;D Show Debug
-&#2000;&#2318;X Show Extensions
-&#2000;&#2318;H Replace in files
-&#2000;&#2318;J Toggle Search details
-&#2000;&#2318;U Show Output panel
-&#2000;&#2318;V Open Markdown preview
-&#2318;K V Open Markdown preview to the side
-&#2318;K Z Zen Mode (Esc Esc to exit)
+
+^\u2318;F Toggle full screen
+
+\u2325;\u2318;0 Toggle editor layout (horizontal/vertical)
+
+\u2318;= / \u2000;\u2318;- Zoom in/out
+
+\u2318;B Toggle Sidebar visibility
+
+\u2000;\u2318;E Show Explorer / Toggle focus
+
+\u2000;\u2318;F Show Search
+
+^\u2000;G Show Source Control
+
+\u2000;\u2318;D Show Debug
+
+\u2000;\u2318;X Show Extensions
+
+\u2000;\u2318;H Replace in files
+
+\u2000;\u2318;J Toggle Search details
+
+\u2000;\u2318;U Show Output panel
+
+\u2000;\u2318;V Open Markdown preview
+
+\u2318;K V Open Markdown preview to the side
+
+\u2318;K Z Zen Mode (Esc Esc to exit)
 
 ## Debug
+
 F9 Toggle breakpoint
+
 F5 Start/Continue
-F11 / &#2000;F11 Step into/ out
+
+F11 / \u2000;F11 Step into/ out
+
 F10 Step over
-&#2000;F5 Stop
-&#2318;K &#2318;I Show hover
+
+\u2000;F5 Stop
+
+\u2318;K \u2318;I Show hover
 
 ## Integrated terminal
+
 ^` Show integrated terminal
-^&#2000;` Create new terminal
-&#2318;C Copy selection
-&#2318;↑ / ↓ Scroll up/down
+
+^\u2000;` Create new terminal
+
+\u2318;C Copy selection
+
+\u2318;\u2191; / \u2193; Scroll up/down
+
 PgUp / PgDn Scroll page up/down
-&#2318;Home / End Scroll to top/bottom
+
+\u2318;Home / End Scroll to top/bottom
