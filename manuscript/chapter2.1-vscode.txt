@@ -1,4 +1,4 @@
-## 3.1 Visual Studio Code
+## 2.1 Visual Studio Code
 
 Visual Studio Code is an lightweight code editor produced by Microsoft, and released in 2015 for Windows, Linux, and macOS. It's a highly customizable environment with plugins for virtually all programming, and markup languages. It supports syntax highlighting, code completion, debugging, and source control with Git, which we will discuss in the next chapter. It also has an integrated terminal from executing programs and scripts from the command line.
 
@@ -11,7 +11,7 @@ I'll describe the installation process, customization, and plugins necessary to 
 Download the appropriate installer for your operating systemfrom https://code.visualstudio.com/Download and follow the instructions to install Visual Studio Code. 
 
 {height=20%,float=center}
-![Visual Studio Code Download](images/download-vs-code.png)
+![Visual Studio Code Download](images/chapter2.1-vscode/download-vs-code.png)
 
 For Mac, you unzip the downloaded file, and drag the Visual Studio Code application directly into the Applications folder. 
 

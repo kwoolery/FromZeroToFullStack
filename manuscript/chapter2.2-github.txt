@@ -1,4 +1,4 @@
-## 3.2 Github
+## 2.2 Github
 
 Github is a web-based hosting service used for version control using Git, primarily for code based projects, but virtually anything can be version controlled on Github, in fact, this book, along with the accompanying code is being managed in Github. Git itself is a version control system developed by Linus Torvalds to manage a distributed team working on the Linux Operating System. Prior to Git, most version control systems were centralized around a common master repository, whereas Git is a peer-to-peer version control system where an equal copy of the repository is accessible to anyone, however, it is usually managed by either an individual or a group, and changes are approved via pull requests from another individuals version repository. If you want to know more about Git, you can check out the appendix for a list of common Git commands.
 

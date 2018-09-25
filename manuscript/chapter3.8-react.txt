@@ -1,6 +1,0 @@
-
-## 3.8 React
-
-### 3.8.1 ReactJS
-
-### 3.8.2 ReactNative

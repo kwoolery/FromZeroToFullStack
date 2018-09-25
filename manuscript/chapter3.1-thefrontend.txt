@@ -1,0 +1,47 @@
+## 3.1 The Front End
+
+### 3.1.1 Feature Requirements and Pages
+
+We'll use the following page definitions as a starting point for creating the front end applications, and architecting the solutions on the backend and in the data store. 
+
+#### 3.1.1.1 Signup
+We need to allow new users to signup in order to create unique identies within our application. We'll do this by allowing them to use either their Facebook, or Google user information. This will require integration with the Facebook and Google identity systems. If a user signs up with Facebook or Google, we'll create an internal record to map our user ID to the connected Facebook or Google ID. In case a user decides not to link their Facebook or Google account, we'll also allow users to signup directly with their email addresses. The signup process will capture basic information, such as age, gender, and their preferences for coffee shops and coffee. 
+
+#### 3.1.1.2 3.1.1.3 Login
+We need to allow users to login with their email, or with either their Facebook or Google credentials. This is a simple interface that presents the user with an input box for their username or email and a password box. Below the input boxes, there will be a button for signing in with Facebook, and another for signing in with Google. Once the user chooses a login method, we'll either validate internally, or pass off authentication to Facebook or Google.   
+
+#### 3.1.1.3 Search Coffee Shops
+We need to allow users to search for coffee shops, either in their area, or in an arbitrary location. This requires use to identify where the user is currently located. The user can search on basic critiera such as the coffee shop name, street name, coffee shop type, size, and menu itms. The returning list will be ordered by ranking by default. The search will use a local representation of the coffee shop first, and it will attempt to find new coffee shops by criteria from Google Places API.
+
+#### Coffee Shop Details
+The main landing page for the coffee shops. The initial data will be pulled in from Google Places, but this can be modified based on coffee shop ownership. This page will have an image of the coffee shop, the current ranking, comments, and links to menu items, as well as the classified items, and chat. A user can rank, and review the coffee shop from this page. The ranks will be 1 to 5 stars. 
+
+#### Coffee Shop Review
+The coffee shop details page will have a shortened list of all the reviews, with some highlighted. This page will include an archive of all reviews, along with rankings. Reviews will be specific to the coffee shop, and include a ranking. 
+
+#### Coffee Shop Comments
+The coffee shop details page will have a shortened list of all the comments with some highlighted. Comments can be temporal, and people can create threads of discussion, whereas reviews are limited to one per person, and are associated with a ranking. Comments be ongoing, and have topics associated. The comments page will have a search capability to find the most trending topics around an individual coffee shop.
+
+#### Coffee Shop Image Upload
+Users should be able to upload images of the establishment, and menu items. The coffee shop details page will have a few highlighted images, while this page will be an album type experience, and allow anyone to upload, view, and rank images associated with the coffe shop. 
+
+#### Menu Items List
+This will be a list of items from the coffee shop with accompanying images, and prices. Initially we'll use !!!! FIND A MENU API !!!! to populate the menu items, but will allow users to input menu items. 
+
+#### Menu Item Details
+This page will have the details of the menu item, and be the landing page for a specific item. Users can leave comments, and reviews on this page. Any nutritional information available will be on this page as well.  
+
+#### Menu Item Reviews
+The menu item details page will have a shortened list of all the reviews, with some highlighted. This page will include an archive of all reviews, along with rankings. Reviews will be specific to the menu item, and include a ranking. 
+
+#### Menu Item Comments
+The menu item details page will have a shortened list of all the comments with some highlighted. Comments can be temporal, and people can create threads of discussion, whereas reviews are limited to one per person, and are associated with a ranking. Comments be ongoing, and have topics associated. The comments page will have a search capability to find the most trending topics around an individual menu item.
+
+#### Menu Item Image Upload
+Users should be able to upload images of the menu items. The menu item details page will have a few highlighted images, while this page will be an album type experience, and allow anyone to upload, view, and rank images associated with the coffe shop. 
+
+#### Classified Section
+The classified section is a place where users can upload various items, and services for sale, jobs available, upcoming events, as well as any announcments. The classifed section will allow users to respond in private to the post owner. 
+
+#### Local Chat
+A user may want to connect with people who frequent the same coffee shop, or post questions for real time response. The local chat functionality will allow groups of users to communicate, or for individual users to connect while inside the coffee shop. 
