@@ -2,11 +2,11 @@
 *From https://code.visualstudio.com/docs/getstarted/keybindings*
 
 ### General
-\u2000; \u2318;P, F1 Show Command Palette
+⌘ \u2318;P, F1 Show Command Palette
 
 \u2318;P Quick Open, Go to File…
 
-\u2000;\u2318;N New window/instance
+⌘\u2318;N New window/instance
 
 \u2318;W Close window/instance
 
@@ -21,13 +21,13 @@
 
 \u2325;\u2193; / \u2325;\u2191; Move line down/up
 
-\u2000;\u2325;\u2193; / \u2000;\u2325;\u2191; Copy line down/up
+⌘\u2325;\u2193; / ⌘\u2325;\u2191; Copy line down/up
 
-\u2000;\u2318;K Delete line
+⌘\u2318;K Delete line
 
-\u2318;Enter / \u2000;\u2318;Enter Insert line below/above
+\u2318;Enter / ⌘\u2318;Enter Insert line below/above
 
-\u2000;\u2318;\ Jump to matching bracket
+⌘\u2318;\ Jump to matching bracket
 
 \u2318;] / \u2318;[ Indent/outdent line
 
@@ -52,7 +52,7 @@ Home / End Go to beginning/end of line
 
 \u2318;/ Toggle line comment
 
-\u2000;\u2325;A Toggle block comment
+⌘\u2325;A Toggle block comment
 
 \u2325;Z Toggle word wrap
 
@@ -66,25 +66,25 @@ Home / End Go to beginning/end of line
 
 \u2318;U Undo last cursor operation
 
-\u2000;\u2325;I Insert cursor at end of each line selected
+⌘\u2325;I Insert cursor at end of each line selected
 
 \u2318;I Select current line
 
-\u2000;\u2318;L Select all occurrences of current selection
+⌘\u2318;L Select all occurrences of current selection
 
 \u2318;F2 Select all occurrences of current word
 
-^\u2000;\u2318;→ / ← Expand / shrink selection
+^⌘\u2318;→ / ← Expand / shrink selection
 
-\u2000;\u2325; + drag mouse Column (box) selection
+⌘\u2325; + drag mouse Column (box) selection
 
-\u2000;\u2325;\u2318;\u2191; / \u2193; Column (box) selection up/down
+⌘\u2325;\u2318;\u2191; / \u2193; Column (box) selection up/down
 
-\u2000;\u2325;\u2318;← / → Column (box) selection left/right
+⌘\u2325;\u2318;← / → Column (box) selection left/right
 
-\u2000;\u2325;\u2318;PgUp Column (box) selection page up
+⌘\u2325;\u2318;PgUp Column (box) selection page up
 
-\u2000;\u2325;\u2318;PgDn Column (box) selection page down
+⌘\u2325;\u2318;PgDn Column (box) selection page down
 
 ### Search and replace
 
@@ -92,7 +92,7 @@ Home / End Go to beginning/end of line
 
 \u2325;\u2318;F Replace
 
-\u2318;G / \u2000;\u2318;G Find next/previous
+\u2318;G / ⌘\u2318;G Find next/previous
 
 \u2325;Enter Select all occurrences of Find match
 
@@ -105,9 +105,9 @@ Home / End Go to beginning/end of line
 
 ^Space Trigger suggestion
 
-\u2000;\u2318;Space Trigger parameter hints
+⌘\u2318;Space Trigger parameter hints
 
-\u2000;\u2325;F Format document
+⌘\u2325;F Format document
 
 \u2318;K \u2318;F Format selection
 
@@ -119,7 +119,7 @@ F12 Go to Definition
 
 \u2318;. Quick Fix
 
-\u2000;F12 Show References
+⌘F12 Show References
 
 F2 Rename Symbol
 
@@ -135,17 +135,17 @@ F2 Rename Symbol
 
 \u2318;P Go to File...
 
-\u2000;\u2318;O Go to Symbol...
+⌘\u2318;O Go to Symbol...
 
-\u2000;\u2318;M Show Problems panel
+⌘\u2318;M Show Problems panel
 
-F8 / \u2000;F8 Go to next/previous error or warning
+F8 / ⌘F8 Go to next/previous error or warning
 
-^\u2000;Tab Navigate editor group history
+^⌘Tab Navigate editor group history
 
-^- / ^\u2000;- Go back/forward
+^- / ^⌘- Go back/forward
 
-^\u2000;M Toggle Tab moves focus
+^⌘M Toggle Tab moves focus
 
 ### Editor management
 
@@ -161,7 +161,7 @@ st, 2nd, 3rd editor group
 
 \u2318;K \u2318;← / \u2318;K \u2318;→ Focus into previous/next editor group
 
-\u2318;K \u2000;\u2318;← / \u2318;K \u2000;\u2318;→ Move editor left/right
+\u2318;K ⌘\u2318;← / \u2318;K ⌘\u2318;→ Move editor left/right
 
 \u2318;K ← / \u2318;K → Move active editor group
 
@@ -173,7 +173,7 @@ st, 2nd, 3rd editor group
 
 \u2318;S Save
 
-\u2000;\u2318;S Save As...
+⌘\u2318;S Save As...
 
 \u2325;\u2318;S Save All
 
@@ -181,11 +181,11 @@ st, 2nd, 3rd editor group
 
 \u2318;K \u2318;W Close All
 
-\u2000;\u2318;T Reopen closed editor
+⌘\u2318;T Reopen closed editor
 
 \u2318;K Enter Keep preview mode editor open
 
-^Tab / ^\u2000;Tab Open next / previous
+^Tab / ^⌘Tab Open next / previous
 
 \u2318;K P Copy path of active file
 
@@ -199,27 +199,27 @@ st, 2nd, 3rd editor group
 
 \u2325;\u2318;0 Toggle editor layout (horizontal/vertical)
 
-\u2318;= / \u2000;\u2318;- Zoom in/out
+\u2318;= / ⌘\u2318;- Zoom in/out
 
 \u2318;B Toggle Sidebar visibility
 
-\u2000;\u2318;E Show Explorer / Toggle focus
+⌘\u2318;E Show Explorer / Toggle focus
 
-\u2000;\u2318;F Show Search
+⌘\u2318;F Show Search
 
-^\u2000;G Show Source Control
+^⌘G Show Source Control
 
-\u2000;\u2318;D Show Debug
+⌘\u2318;D Show Debug
 
-\u2000;\u2318;X Show Extensions
+⌘\u2318;X Show Extensions
 
-\u2000;\u2318;H Replace in files
+⌘\u2318;H Replace in files
 
-\u2000;\u2318;J Toggle Search details
+⌘\u2318;J Toggle Search details
 
-\u2000;\u2318;U Show Output panel
+⌘\u2318;U Show Output panel
 
-\u2000;\u2318;V Open Markdown preview
+⌘\u2318;V Open Markdown preview
 
 \u2318;K V Open Markdown preview to the side
 
@@ -231,11 +231,11 @@ F9 Toggle breakpoint
 
 F5 Start/Continue
 
-F11 / \u2000;F11 Step into/ out
+F11 / ⌘F11 Step into/ out
 
 F10 Step over
 
-\u2000;F5 Stop
+⌘F5 Stop
 
 \u2318;K \u2318;I Show hover
 
@@ -243,7 +243,7 @@ F10 Step over
 
 ^` Show integrated terminal
 
-^\u2000;` Create new terminal
+^⌘` Create new terminal
 
 \u2318;C Copy selection
 
