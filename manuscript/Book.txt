@@ -54,7 +54,6 @@ appendixA.1-macosvscodekeys.txt
 appendixA.2-windowsvscodekeys.txt
 appendixA.3-linuxvscodekeys.txt
 appendixB-gitcommand.txt
-appendixC-githubfunctions.txt
-appendixD-markdown.txt
+appendixC-markdown.txt
 
 
