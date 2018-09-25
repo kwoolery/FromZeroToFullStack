@@ -2,138 +2,138 @@
 *From https://code.visualstudio.com/docs/getstarted/keybindings*
 
 ## General
-⇧⌘P, F1 Show Command Palette
-⌘P Quick Open, Go to File…
-⇧⌘N New window/instance
-⌘W Close window/instance
-⌘, User Settings
-⌘K ⌘S Keyboard Shortcuts
+&#2000;&#2318;P, F1 Show Command Palette
+&#2318;P Quick Open, Go to File…
+&#2000;&#2318;N New window/instance
+&#2318;W Close window/instance
+&#2318;, User Settings
+&#2318;K &#2318;S Keyboard Shortcuts
 
 ## Basic editing
-⌘X Cut line (empty selection)
-⌘C Copy line (empty selection)
-⌥↓ / ⌥↑ Move line down/up
-⇧⌥↓ / ⇧⌥↑ Copy line down/up
-⇧⌘K Delete line
-⌘Enter / ⇧⌘Enter Insert line below/above
-⇧⌘\ Jump to matching bracket
-⌘] / ⌘[ Indent/outdent line
+&#2318;X Cut line (empty selection)
+&#2318;C Copy line (empty selection)
+&#2325;↓ / &#2325;↑ Move line down/up
+&#2000;&#2325;↓ / &#2000;&#2325;↑ Copy line down/up
+&#2000;&#2318;K Delete line
+&#2318;Enter / &#2000;&#2318;Enter Insert line below/above
+&#2000;&#2318;\ Jump to matching bracket
+&#2318;] / &#2318;[ Indent/outdent line
 Home / End Go to beginning/end of line
-⌘↑ / ⌘↓ Go to beginning/end of file
-⌃PgUp / ⌃PgDn Scroll line up/down
-⌘PgUp /⌘PgDn Scroll page up/down
-⌥⌘[ / ⌥⌘] Fold/unfold region
-⌘K ⌘[ / ⌘K ⌘] Fold/unfold all subregions
-⌘K ⌘0 / ⌘K ⌘J Fold/unfold all regions
-⌘K ⌘C Add line comment
-⌘K ⌘U Remove line comment
-⌘/ Toggle line comment
-⇧⌥A Toggle block comment
-⌥Z Toggle word wrap
+&#2318;↑ / &#2318;↓ Go to beginning/end of file
+^PgUp / ^PgDn Scroll line up/down
+&#2318;PgUp /&#2318;PgDn Scroll page up/down
+&#2325;&#2318;[ / &#2325;&#2318;] Fold/unfold region
+&#2318;K &#2318;[ / &#2318;K &#2318;] Fold/unfold all subregions
+&#2318;K &#2318;0 / &#2318;K &#2318;J Fold/unfold all regions
+&#2318;K &#2318;C Add line comment
+&#2318;K &#2318;U Remove line comment
+&#2318;/ Toggle line comment
+&#2000;&#2325;A Toggle block comment
+&#2325;Z Toggle word wrap
 
 ## Multi-cursor and selection
-⌥ + click Insert cursor
-⌥⌘↑ Insert cursor above
-⌥⌘↓ Insert cursor below
-⌘U Undo last cursor operation
-⇧⌥I Insert cursor at end of each line selected
-⌘I Select current line
-⇧⌘L Select all occurrences of current selection
-⌘F2 Select all occurrences of current word
-⌃⇧⌘→ / ← Expand / shrink selection
-⇧⌥ + drag mouse Column (box) selection
-⇧⌥⌘↑ / ↓ Column (box) selection up/down
-⇧⌥⌘← / → Column (box) selection left/right
-⇧⌥⌘PgUp Column (box) selection page up
-⇧⌥⌘PgDn Column (box) selection page down
+&#2325; + click Insert cursor
+&#2325;&#2318;↑ Insert cursor above
+&#2325;&#2318;↓ Insert cursor below
+&#2318;U Undo last cursor operation
+&#2000;&#2325;I Insert cursor at end of each line selected
+&#2318;I Select current line
+&#2000;&#2318;L Select all occurrences of current selection
+&#2318;F2 Select all occurrences of current word
+^&#2000;&#2318;→ / ← Expand / shrink selection
+&#2000;&#2325; + drag mouse Column (box) selection
+&#2000;&#2325;&#2318;↑ / ↓ Column (box) selection up/down
+&#2000;&#2325;&#2318;← / → Column (box) selection left/right
+&#2000;&#2325;&#2318;PgUp Column (box) selection page up
+&#2000;&#2325;&#2318;PgDn Column (box) selection page down
 
 
 ## Search and replace
-⌘F Find
-⌥⌘F Replace
-⌘G / ⇧⌘G Find next/previous
-⌥Enter Select all occurrences of Find match
-⌘D Add selection to next Find match
-⌘K ⌘D Move last selection to next Find match
+&#2318;F Find
+&#2325;&#2318;F Replace
+&#2318;G / &#2000;&#2318;G Find next/previous
+&#2325;Enter Select all occurrences of Find match
+&#2318;D Add selection to next Find match
+&#2318;K &#2318;D Move last selection to next Find match
 
 ## Rich languages editing
-⌃Space Trigger suggestion
-⇧⌘Space Trigger parameter hints
-⇧⌥F Format document
-⌘K ⌘F Format selection
+^Space Trigger suggestion
+&#2000;&#2318;Space Trigger parameter hints
+&#2000;&#2325;F Format document
+&#2318;K &#2318;F Format selection
 F12 Go to Definition
-⌥F12 Peek Definition
-⌘K F12 Open Definition to the side
-⌘. Quick Fix
-⇧F12 Show References
+&#2325;F12 Peek Definition
+&#2318;K F12 Open Definition to the side
+&#2318;. Quick Fix
+&#2000;F12 Show References
 F2 Rename Symbol
-⌘K ⌘X Trim trailing whitespace
-⌘K M Change file language
+&#2318;K &#2318;X Trim trailing whitespace
+&#2318;K M Change file language
 
 ## Navigation
-⌘T Show all Symbols
-⌃G Go to Line...
-⌘P Go to File...
-⇧⌘O Go to Symbol...
-⇧⌘M Show Problems panel
-F8 / ⇧F8 Go to next/previous error or warning
-⌃⇧Tab Navigate editor group history
-⌃- / ⌃⇧- Go back/forward
-⌃⇧M Toggle Tab moves focus
+&#2318;T Show all Symbols
+^G Go to Line...
+&#2318;P Go to File...
+&#2000;&#2318;O Go to Symbol...
+&#2000;&#2318;M Show Problems panel
+F8 / &#2000;F8 Go to next/previous error or warning
+^&#2000;Tab Navigate editor group history
+^- / ^&#2000;- Go back/forward
+^&#2000;M Toggle Tab moves focus
 Editor management
-⌘W Close editor
-⌘K F Close folder
-⌘\ Split editor
-⌘1 / ⌘2 / ⌘3 Focus into 1
+&#2318;W Close editor
+&#2318;K F Close folder
+&#2318;\ Split editor
+&#2318;1 / &#2318;2 / &#2318;3 Focus into 1
 st, 2nd, 3rd editor group
-⌘K ⌘← / ⌘K ⌘→ Focus into previous/next editor group
-⌘K ⇧⌘← / ⌘K ⇧⌘→ Move editor left/right
-⌘K ← / ⌘K → Move active editor group
+&#2318;K &#2318;← / &#2318;K &#2318;→ Focus into previous/next editor group
+&#2318;K &#2000;&#2318;← / &#2318;K &#2000;&#2318;→ Move editor left/right
+&#2318;K ← / &#2318;K → Move active editor group
 
 ## File management
-⌘N New File
-⌘O Open File...
-⌘S Save
-⇧⌘S Save As...
-⌥⌘S Save All
-⌘W Close
-⌘K ⌘W Close All
-⇧⌘T Reopen closed editor
-⌘K Enter Keep preview mode editor open
-⌃Tab / ⌃⇧Tab Open next / previous
-⌘K P Copy path of active file
-⌘K R Reveal active file in Explorer
-⌘K O Show active file in new window/instance
+&#2318;N New File
+&#2318;O Open File...
+&#2318;S Save
+&#2000;&#2318;S Save As...
+&#2325;&#2318;S Save All
+&#2318;W Close
+&#2318;K &#2318;W Close All
+&#2000;&#2318;T Reopen closed editor
+&#2318;K Enter Keep preview mode editor open
+^Tab / ^&#2000;Tab Open next / previous
+&#2318;K P Copy path of active file
+&#2318;K R Reveal active file in Explorer
+&#2318;K O Show active file in new window/instance
 
 ## Display
-⌃⌘F Toggle full screen
-⌥⌘0 Toggle editor layout (horizontal/vertical)
-⌘= / ⇧⌘- Zoom in/out
-⌘B Toggle Sidebar visibility
-⇧⌘E Show Explorer / Toggle focus
-⇧⌘F Show Search
-⌃⇧G Show Source Control
-⇧⌘D Show Debug
-⇧⌘X Show Extensions
-⇧⌘H Replace in files
-⇧⌘J Toggle Search details
-⇧⌘U Show Output panel
-⇧⌘V Open Markdown preview
-⌘K V Open Markdown preview to the side
-⌘K Z Zen Mode (Esc Esc to exit)
+^&#2318;F Toggle full screen
+&#2325;&#2318;0 Toggle editor layout (horizontal/vertical)
+&#2318;= / &#2000;&#2318;- Zoom in/out
+&#2318;B Toggle Sidebar visibility
+&#2000;&#2318;E Show Explorer / Toggle focus
+&#2000;&#2318;F Show Search
+^&#2000;G Show Source Control
+&#2000;&#2318;D Show Debug
+&#2000;&#2318;X Show Extensions
+&#2000;&#2318;H Replace in files
+&#2000;&#2318;J Toggle Search details
+&#2000;&#2318;U Show Output panel
+&#2000;&#2318;V Open Markdown preview
+&#2318;K V Open Markdown preview to the side
+&#2318;K Z Zen Mode (Esc Esc to exit)
 
 ## Debug
 F9 Toggle breakpoint
 F5 Start/Continue
-F11 / ⇧F11 Step into/ out
+F11 / &#2000;F11 Step into/ out
 F10 Step over
-⇧F5 Stop
-⌘K ⌘I Show hover
+&#2000;F5 Stop
+&#2318;K &#2318;I Show hover
 
 ## Integrated terminal
-⌃` Show integrated terminal
-⌃⇧` Create new terminal
-⌘C Copy selection
-⌘↑ / ↓ Scroll up/down
+^` Show integrated terminal
+^&#2000;` Create new terminal
+&#2318;C Copy selection
+&#2318;↑ / ↓ Scroll up/down
 PgUp / PgDn Scroll page up/down
-⌘Home / End Scroll to top/bottom
+&#2318;Home / End Scroll to top/bottom
