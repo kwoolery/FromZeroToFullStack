@@ -1,7 +1,7 @@
 # A.1 Visual Studio Shortcut Keys macOS
 *From https://code.visualstudio.com/docs/getstarted/keybindings*
 
-## General
+### General
 \u2000; \u2318;P, F1 Show Command Palette
 
 \u2318;P Quick Open, Go to File…
@@ -14,7 +14,7 @@
 
 \u2318;K \u2318;S Keyboard Shortcuts
 
-## Basic editing
+### Basic editing
 \u2318;X Cut line (empty selection)
 
 \u2318;C Copy line (empty selection)
@@ -56,7 +56,7 @@ Home / End Go to beginning/end of line
 
 \u2325;Z Toggle word wrap
 
-## Multi-cursor and selection
+### Multi-cursor and selection
 
 \u2325; + click Insert cursor
 
@@ -86,7 +86,7 @@ Home / End Go to beginning/end of line
 
 \u2000;\u2325;\u2318;PgDn Column (box) selection page down
 
-## Search and replace
+### Search and replace
 
 \u2318;F Find
 
@@ -101,7 +101,7 @@ Home / End Go to beginning/end of line
 \u2318;K \u2318;D Move last selection to next Find match
 
 
-## Rich languages editing
+### Rich languages editing
 
 ^Space Trigger suggestion
 
@@ -127,7 +127,7 @@ F2 Rename Symbol
 
 \u2318;K M Change file language
 
-## Navigation
+### Navigation
 
 \u2318;T Show all Symbols
 
@@ -147,7 +147,7 @@ F8 / \u2000;F8 Go to next/previous error or warning
 
 ^\u2000;M Toggle Tab moves focus
 
-## Editor management
+### Editor management
 
 \u2318;W Close editor
 
@@ -165,7 +165,7 @@ st, 2nd, 3rd editor group
 
 \u2318;K ← / \u2318;K → Move active editor group
 
-## File management
+### File management
 
 \u2318;N New File
 
@@ -193,7 +193,7 @@ st, 2nd, 3rd editor group
 
 \u2318;K O Show active file in new window/instance
 
-## Display
+### Display
 
 ^\u2318;F Toggle full screen
 
@@ -225,7 +225,7 @@ st, 2nd, 3rd editor group
 
 \u2318;K Z Zen Mode (Esc Esc to exit)
 
-## Debug
+### Debug
 
 F9 Toggle breakpoint
 
@@ -239,7 +239,7 @@ F10 Step over
 
 \u2318;K \u2318;I Show hover
 
-## Integrated terminal
+### Integrated terminal
 
 ^` Show integrated terminal
 
