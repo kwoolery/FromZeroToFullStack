@@ -11,7 +11,7 @@ I'll describe the installation process, customization, and plugins necessary to 
 Download the appropriate installer for your operating systemfrom https://code.visualstudio.com/Download and follow the instructions to install Visual Studio Code. 
 
 {height=20%,float=center}
-![Visual Studio Code Download](images/chapter2.1-vscode/download-vs-code.png)
+![Visual Studio Code Download](images/vscode-download-vs-code.png)
 
 For Mac, you unzip the downloaded file, and drag the Visual Studio Code application directly into the Applications folder. 
 
@@ -44,10 +44,16 @@ One of the advantages of Visual Studio Code is the unlimited functionality provi
 
 There's an extension button on the Visual Studio side nav that gives you access to the extensions panel. The installation of extensions is extremely easy. First, find the extensions button on the left hand side nav, and click it, or choose View->Extensions from the top level menu. 
 
-![Extensions Button](images/chapter2.1-vscode/extension-button.png)
+![Extensions Button](images/chapter2.1_vscode/extension-button.png)
 
+This will take you to the extensions panel as seen below. 
+
+![Extensions Panel](images/chapter2.1_vscode/extension-panel.png)
+
+The following is a list of extensions that we'll be using throughout the rest of the book. 
 
 * GitLens
+
 * Code Runner
 * Docker
 * Go
