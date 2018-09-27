@@ -1,6 +1,6 @@
 ## 2.1 Visual Studio Code
 
-Visual Studio Code is an lightweight code editor produced by Microsoft, and released in 2015 for Windows, Linux, and macOS. It's a highly customizable environment with plugins for virtually all programming, and markup languages. It supports syntax highlighting, code completion, debugging, and source control with Git, which we will discuss in the next chapter. It also has an integrated terminal from executing programs and scripts from the command line.
+Visual Studio Code is a lightweight code editor produced by Microsoft, and released in 2015 for Windows, Linux, and macOS. It's a highly customizable environment with plugins for virtually all programming, and markup languages. It supports syntax highlighting, code completion, debugging, and source control with Git, which we will discuss in the next chapter. It also has an integrated terminal from executing programs and scripts from the command line.
 
 There is no requirement to use Visual Studio Code to build the project described in this book, however some references will be made to Visual Studio Code throughout the book. The principal thing to remember is that the choice of a development environment is an important one for any developer. When efficiency, and productivity are paramount, it's critical to be comfortable in your workspace, and not have to context switch between disparate tools. Visual Studio Code isn't the only available editor, there are many great options in the market, such as Atom, Sublime Text 2, the Jetbrains Suite, including GoLand, and WebStorm. My advice would be to choose an development environment, and familiarize yourself with the features that will make you the most productive.
 
@@ -8,7 +8,11 @@ I'll describe the installation process, customization, and plugins necessary to 
 
 ### 3.1.1 Installation
 
-Download the appropriate installer for your operating systemfrom https://code.visualstudio.com/Download and follow the instructions to install Visual Studio Code. 
+Download the appropriate installer for your operating system from 
+
+https://code.visualstudio.com/Download 
+
+and follow the instructions to install Visual Studio Code. 
 
 {height=20%,float=center}
 ![Visual Studio Code Download](images/vscode-download-vs-code.png)
@@ -50,7 +54,9 @@ This will take you to the extensions panel as seen below.
 
 ![Extensions Panel](images/chapter2.1_vscode/extension-panel.png)
 
-The following is a list of extensions that we'll be using throughout the rest of the book. 
+In order to install an extension, search the marketplace to find the exentions, then click on the green install button, and follow the directions. After the installation, the install button will become a reload button. Clicking on the reload button will restart Visual Studio Code with the new extension activated. The restart will maintain your current environment.
+
+The following is a list of extensions that we'll be using throughout the rest of the book with a brief description of what functionality they provide. 
 
 * GitLens
 
