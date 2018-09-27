@@ -1,6 +1,6 @@
 ## 2.3 Amazon Web Services (AWS)
 
-AWS is an on-demand cloud computing platform offerred by Amazon, offering dozens of services for serving and managing applications in a robust environment. With AWS, developers and systems engineers don't need to worry about the low-level details of hardware provision and deployment, since AWS provides an easy interface for bringing up new servers as-needed based on the immediate requirement of your application. In addition to the basic server management services, AWS provdides services for computing, storage, networking, database, analytics, application services, deployment, management, mobile, developer tools, and tools for the Internet of Things, as well as services to make machine learning accessible at scale. 
+AWS is an on-demand cloud computing platform from Amazon, offering dozens of services for serving and managing applications in a robust environment. With AWS, developers and systems engineers don't need to worry about the low-level details of hardware provision and deployment, since AWS provides an easy interface for bringing up new servers as-needed based on the immediate requirement of your application. In addition to the basic server management services, AWS provdides services for computing, storage, networking, database, analytics, application services, deployment, management, mobile, developer tools, and tools for the Internet of Things, as well as services to make machine learning accessible at scale. 
 
 For this project, we'll be using AWS for media file storage, serving our API, as well as hosting our datastore. Most AWS services have a free-tier that allows developers to take the services for a test run without incurring any costs. I'll attempt to point out the thresholds that fall within this free-tier, and steer the project in a direction that won't require any initial investment when possible. As of the writing of this book, the following services are provided on the free tier with the given limitations. 
 
@@ -10,9 +10,14 @@ For this project, we'll be using AWS for media file storage, serving our API, as
 * AWS Lambda - 1 Million free requests per month
 
 ### 2.3.1 Signing up for AWS
+
 ### 2.3.2 Simple Storage Service (S3)
+
 ### 2.3.3 Elastic Compute Cloud (EC2)
+
 ### 2.3.4 Elastic Beanstalk
+
 ### 2.3.5 DynamoDB
+
 ### 2.3.6 Lambda
 
