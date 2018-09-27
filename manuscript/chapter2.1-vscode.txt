@@ -52,6 +52,7 @@ There's an extension button on the Visual Studio side nav that gives you access 
 
 This will take you to the extensions panel as seen below. 
 
+{height=20%,float=left}
 ![Extensions Panel](images/chapter2.1-vscode/extension-panel.png)
 
 In order to install an extension, search the marketplace to find the exentions, then click on the green install button, and follow the directions. After the installation, the install button will become a reload button. Clicking on the reload button will restart Visual Studio Code with the new extension activated. The restart will maintain your current environment.
