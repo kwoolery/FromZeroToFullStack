@@ -17,6 +17,9 @@ and follow the instructions to install Visual Studio Code.
 {height=20%,float=center}
 ![Visual Studio Code Download](images/vscode-download-vs-code.png)
 
+{height=20%,float=center}
+![Visual Studio Code Download 2](resources/images/vscode-download-vs-code.png)
+
 For Mac, you unzip the downloaded file, and drag the Visual Studio Code application directly into the Applications folder. 
 
 For Windows, you double-click on the downloaded VSCodeUserSetup file, and follow the installation wizard instructions. Typically, the default options should work for most people.
