@@ -36,11 +36,16 @@ For Ubuntu, or Debian, there are multiple ways to install the downloaded deb fil
 Once installed, you should open Visual Studio Code, and see the following screen:
 
 {height=20%,float=center}
-![Visual Studio Code Download](images/chapter2.1-vscode/welcome.png)
+![Visual Studio Code Welcome Page](images/chapter2.1-vscode/welcome.png)
 
-### 3.1.2 Customization
+### 3.1.2 Installing Extensions
 
-### 3.1.3 Plugin Installation
+One of the advantages of Visual Studio Code is the unlimited functionality provided by extensions. In order to get the most of Visual Studio Code, and to make our lives easier as developers, we're going to install a few that will give us additional tools for managing our code, language specific synatx highlighting, and easy access to runtime enviornments for streamlining our development process. 
+
+There's an extension button on the Visual Studio side nav that gives you access to the extensions panel. The installation of extensions is extremely easy. First, find the extensions button on the left hand side nav, and click it, or choose View->Extensions from the top level menu. 
+
+![Extensions Button](images/chapter2.1-vscode/extension-button.png)
+
 
 * GitLens
 * Code Runner
