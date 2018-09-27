@@ -35,6 +35,9 @@ For Ubuntu, or Debian, there are multiple ways to install the downloaded deb fil
 
 Once installed, you should open Visual Studio Code, and see the following screen:
 
+{height=20%,float=center}
+![Visual Studio Code Download](images/chapter2.1-vscode/welcome.png)
+
 ### 3.1.2 Customization
 
 ### 3.1.3 Plugin Installation
