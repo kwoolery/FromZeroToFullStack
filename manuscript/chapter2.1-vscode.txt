@@ -6,11 +6,11 @@ There is no requirement to use Visual Studio Code to build the project described
 
 I'll describe the installation process, customization, and plugins necessary to create the Visual Studion Code environment that will help us build the project in the most efficient way possible. 
 
-### 3.1.1 Installation
+### 2.1.1 Installation
 
 Download the appropriate installer for your operating system from 
 
-https://code.visualstudio.com/Download 
+<https://code.visualstudio.com/Download >
 
 and follow the instructions to install Visual Studio Code. 
 
@@ -42,7 +42,7 @@ Once installed, you should open Visual Studio Code, and see the following screen
 {height=20%,float=center}
 ![Visual Studio Code Welcome Page](images/chapter2.1-vscode/welcome.png)
 
-### 3.1.2 Installing Extensions
+### 2.1.2 Installing Extensions
 
 One of the advantages of Visual Studio Code is the unlimited functionality provided by extensions. In order to get the most of Visual Studio Code, and to make our lives easier as developers, we're going to install a few that will give us additional tools for managing our code, language specific synatx highlighting, and easy access to runtime enviornments for streamlining our development process. 
 
@@ -50,9 +50,9 @@ There's an extension button on the Visual Studio side nav that gives you access 
 
 ![Extensions Button](images/chapter2.1-vscode/extension-button.png)
 
-This will take you to the extensions panel as seen below. 
+This will take you to the extensions panel as seen to the left. 
 
-{height=20%,float=left}
+{width=50%,float=left}
 ![Extensions Panel](images/chapter2.1-vscode/extension-panel.png)
 
 In order to install an extension, search the marketplace to find the exentions, then click on the green install button, and follow the directions. After the installation, the install button will become a reload button. Clicking on the reload button will restart Visual Studio Code with the new extension activated. The restart will maintain your current environment.
