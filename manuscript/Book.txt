@@ -2,8 +2,8 @@ chapter1-introduction.txt
 chapter1.1-aboutme.txt
 chapter1.2-motivations.txt
 chapter1.3-whatisfullstack.txt
-chapter1.4-projectbasedapproach.txt
-chapter1.5-technologychoices.txt
+chapter1.4-technologychoices.txt
+chapter1.5-projectbasedapproach.txt
 chapter2-thedevenvironment.txt
 chapter2.1-vscode.txt
 chapter2.2-github.txt
