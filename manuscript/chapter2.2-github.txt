@@ -6,7 +6,7 @@ Github allows for a central storage location of the repository while still maint
 
 ### Github setup instructions
 
-Go to the Github sign up page at https://github.com/join?source=login
+Go to the Github sign up page at <https://github.com/join?source=login>
 
 ### Importing Project into Visual Studio code
 New Visual Studio Code window -> Start -> Open folder
@@ -16,7 +16,7 @@ Create a New Folder -> Name it coffeeshopranker -> Select folder -> Open
 View -> Command Palette -> Type 'Git: Clone' -> Enter
 
 Enter the Repository URL from Github 
-https://github.com/truvukevin/coffeeshopranker.git
+<https://github.com/truvukevin/coffeeshopranker.git>
 
 ### Creating your first file and syncing on Github 
 
