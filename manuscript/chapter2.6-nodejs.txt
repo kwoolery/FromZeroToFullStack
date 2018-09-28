@@ -1,2 +1,1 @@
-## 2.6
- NodeJS
+## 2.6 NodeJS
