@@ -34,6 +34,43 @@ Congratulations, you've successfully signed up for Amazon Web Services!!! Everyt
 To being, We're going to be setting up the Simple Storage Service, or more commonly known as S3, for use in our application to store uploaded media from customers.  
 
 ### 2.3.2 Simple Storage Service (S3)
+Amazon S3 is a massively scalable object storage system built to store and retrieve any amount of data from anywhere. It can be used as a simple key-value store, or as a full-blown filesystem where files can be accessed directly given a fully qualified path. It can even be setup to serve a static website with automatic index, and error pages, and redirects if necessary. We're not going to go into all of the features of S3 in this section, since there are an infinite number of options for storage, access, security, metadata, etc. If you're interested in knowing more about S3, I would recommend reading the Amazon S3 FAQ at https://aws.amazon.com/s3/faqs/?nc=sn&loc=6. 
+
+In order to setup S3 for our use, we need to navigate to the S3 management console. From anywhere in the AWS Console, you can pull down the "Services" menu at the top left, and either choose S3 from the "Storage" second, or you can start typing S3 in the "Find a service by name or feature" input box. 
+
+When you navigate to the S3 console for the first time, you'll see that you don't have any buckets. Buckets are globally unique containers for everything you store in Amazon S3. A globally unique container means that you must create a name for your bucket that nobody else has ever used. If you choose common words, AWS will probably complain that someone has used that name before. 
+
+Here are two acceptible strategies for determining bucket names. The first, and simplest is to use your username as a prefix to the bucket name. In my case, my username is kevintruvu, so all of my buckets will have the name kevintruvu.<name of my bucket>. The likelyhood that someone has used this bucket name is much lower, since my username is unique to AWS as well. The second strategy should be used when you want to make the contents of the bucket available publicly by way of a unique hostname you have access to. This is helpful when hosting static websites from S3, but can be used for media delivery as well. An example would be if I wanted to have all the files in the bucket accessible from http://media.example.com/. In this case, I would name my bucket media.example.com, and setup a CNAME record for media.example.com to point to the appropriate S3 url (!!!FILL IN S3 URL!!!). 
+
+Once, you've selected a naming strategy, click on the "+ Create bucket" button. You'll be taken to the following screen, where you can enter your DNS Compliant bucket name. I've decided to name my bucket kevintruvu.coffeeshopranker in order to guarantee uniqueness.
+
+!!! IMAGE !!!
+
+Click Next to configure the bucket options. You can leave the default options in place, and click Next to get to the permissions section. 
+
+Since we're going to be using S3 to store, and deliver customer generated images, we'll need to allow end users to access the images directly. We'll give the public read access, and we'll use our application with our API key to upload images by way of the application. Go to the "Manage public permissions" settings, and choose the "Grant public access to this bucket" option. You'll be presented with a warning that this bucket will have public access, which is what we're trying to achieve. Click Next to move to the review section.
+
+If everything looks as you expected, click on the "Create Bucket" button. 
+
+If everyting was accepted, you'll be taken back to the S3 Console Dashboard where you'll se a list of available buckets. You should notice your newly created buck in the list, and the Access field should be marked as public. You can click on the bucket to enter the S3 Bucket Management Console. 
+
+Since you haven't uploaded anything into the bucket yet, you'll be presented with an empty bucket. From here, you can create a new folder, or upload files, and folders directly. 
+
+We don't have any files to upload yet, so let's create a folder. Click on the "+ Create folder" button. You'll be asked to name the folder, and whether you want to encrypt the contents. For our case, just name the folder "Test Folder" and click the Save button. 
+
+You should now see your folder in the list of objects in the overview. Click on the folder to see the contents of the folder. From the listing page, you can either create another folder, or upload files. Click on the "Upload" button, and choose a file from your file system to upload by clicking the Add Files button. You can choose one or more files from your file system. You'll see the files that are ready to upload. Click Next to set the permissions of the file. 
+
+On upload permissions section, you may notice that there's a "Manage public permissions" section similar to when you created the bucket. When uploading files from this interface, you have to choose permissions explicitly. There are ways to automate this when uploading from the command line, or from code, but for now in the manual upload form, you should choose "Grant public read access to this object" From the dropdown, and click Next to set the properties.
+
+You can choose different storage options from the properties page, and whether the file will be encrypted, however, we're going to leave all the default properties for this file. If you want more information regaring the storage classes, refer to the S3 FAQ at  https://aws.amazon.com/s3/faqs/?nc=sn&loc=6. Click Next to get to the review page.
+
+If everything looks good, click on the Upload button. Once the upload is successful, you should see the file listed in the directory. Clicking on the filename will take you to the overview page for that file. 
+
+There are various actions that can be taken on the file such as downloading the file directly, or making the file public if it's not already. If you click open, you'll be able to see the contents of the file in your browser, even if the file is private. However, if the file is public, you'll be presented with a Link at the bottom of the page. You should see something similar to https://s3.amazonaws.com/kevintruvu.coffeeshopranker/testfolder/graph.jpg. It should become obvious now why the bucket name is so critical, all objects in S3 standard storage are accessible via the s3.amazonaws.com hostname, where the top level directory is your bucket name. 
+
+If you were able to see the file in a browser, congratulations, you've successfully setup S3, and you now have the ability to upload and view media from a public url with only a few steps. 
+
+We'll mostly be dealing with S3 in an automated fashion throughout the rest of the project, since we'll be uploading and viewing files from applications rather than directly from web pages, we'll be using the Go AWS SDK to accomplish this. We'll also touch on the AWS command line tools in order to list, and manage files in S3 in a similar way as would be done in the local file sytem. 
 
 ### 2.3.3 Elastic Compute Cloud (EC2)
 
