@@ -59,24 +59,24 @@ In order to install an extension, search the marketplace to find the exentions, 
 
 The following is a list of extensions that we'll be using throughout the rest of the book with a brief description of what functionality they provide. 
 
-#### GitLens
+**GitLens**
 GitLens supercharges the Git capabilities built into Visual Studio Code. It helps you to visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more. *From Extension Details by Eric Amodio*
 
-#### Code Runner
+**Code Runner**
 Run code snippet or code file for multiple languages: C, C++, Java, JavaScript, PHP, Python, Perl, Perl 6, Ruby, Go, Lua, Groovy, PowerShell, BAT/CMD, BASH/SH, F# Script, F# (.NET Core), C# Script, C# (.NET Core), VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml Script, R, AppleScript, Elixir, Visual Basic .NET, Clojure, Haxe, Objective-C, Rust, Racket, AutoHotkey, AutoIt, Kotlin, Dart, Free Pascal, Haskell, Nim, D, and custom command. *From Extension Details by Jun Han*
 
-#### Docker
-The Docker extension makes it easy to build, manage and deploy containerized applications from Visual Studio Code. *From Extension Details by Microsoft*
+**Docker**
+The Docker extension makes it easy to build, manage and deploy containerized applications from Visual Studio Code. We'll discuss the specifics of Docker in a later section. *From Extension Details by Microsoft*
 
-#### Go
+**Go**
 This extension adds rich language support for the Go language to VS Code. *From Extension Details by Microsoft* 
 
-#### HTML CSS Support
+**HTML CSS Support**
 Visual Studio Code CSS Support for HTML Documents. Provides missing CSS support for HTML documents, as well as some features such as class attribute completion, ID attribute complettion, and support for remote files. 
 
-#### React Native Tools
+**React Native Tools**
 This extension provides a development environment for React Native projects. Using this extension, you can debug your code and quickly run react-native commands from the command palette. *From Extension Details by Visual Studio Mobile Tools* 
 
-#### Git History
+**Git History**
 The Git History extension provides advanced view and search into git logs, and allows you to easily compare commits, cherry-pick commits, and revert when necessary.
 
