@@ -5,9 +5,9 @@ AWS is an on-demand cloud computing platform from Amazon, offering dozens of ser
 For this project, we'll be using AWS for media file storage, serving our API, as well as hosting our datastore. Most AWS services have a free-tier that allows developers to take the services for a test run without incurring any costs. I'll attempt to point out the thresholds that fall within this free-tier, and steer the project in a direction that won't require any initial investment when possible. As of the writing of this book, the following services are provided on the free tier with the given limitations. 
 
 * Amazon Simple Storage Service (S3) - 5 GB Storage
-* Amazon DynamoDB - 25 GB Storage
 * Amazon Elastic Compute Cloud (EC2) - 750 Hours of compute time per month on a t2.micro instance
 * Amazon RDS - 750 Hours per month of a db.t2.micro database server
+* Amazon DynamoDB - 25 GB Storage
 * AWS Lambda - 1 Million free requests per month
 
 ### 2.3.1 Signing up for AWS
@@ -34,6 +34,7 @@ Congratulations, you've successfully signed up for Amazon Web Services!!! Everyt
 To being, We're going to be setting up the Simple Storage Service, or more commonly known as S3, for use in our application to store uploaded media from customers.  
 
 ### 2.3.2 Simple Storage Service (S3)
+
 Amazon S3 is a massively scalable object storage system built to store and retrieve any amount of data from anywhere. It can be used as a simple key-value store, or as a full-blown filesystem where files can be accessed directly given a fully qualified path. It can even be setup to serve a static website with automatic index, and error pages, and redirects if necessary. We're not going to go into all of the features of S3 in this section, since there are an infinite number of options for storage, access, security, metadata, etc. If you're interested in knowing more about S3, I would recommend reading the Amazon S3 FAQ at https://aws.amazon.com/s3/faqs/?nc=sn&loc=6. 
 
 In order to setup S3 for our use, we need to navigate to the S3 management console. From anywhere in the AWS Console, you can pull down the "Services" menu at the top left, and either choose S3 from the "Storage" second, or you can start typing S3 in the "Find a service by name or feature" input box. 
@@ -77,6 +78,8 @@ We'll mostly be dealing with S3 in an automated fashion throughout the rest of t
 ### 2.3.4 Elastic Beanstalk
 
 ### 2.3.5 DynamoDB
+
+### 2.3.5 Relational Database Service (RDS)
 
 ### 2.3.6 Lambda
 
