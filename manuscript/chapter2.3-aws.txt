@@ -12,10 +12,12 @@ For this project, we'll be using AWS for media file storage, serving our API, as
 
 ### 2.3.1 Signing up for AWS
 
-Navigate to the following url to signup for your free-tier AWS account. 
+Navigate to the following url to signup for your free-tier AWS account: 
+```
 https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start
+```
 
-{width=50%, float=left}
+{width=50%,float=left}
 ![AWS Signup Page](images/chapter2.3-aws/aws-signup.jpg)
 
 Enter your information, and follow the directions to the next page to enter your contact information. When choosing an account type, you should choose personal to begin with, then proceed to the billing page.
