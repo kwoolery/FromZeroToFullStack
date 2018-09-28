@@ -4,12 +4,34 @@ AWS is an on-demand cloud computing platform from Amazon, offering dozens of ser
 
 For this project, we'll be using AWS for media file storage, serving our API, as well as hosting our datastore. Most AWS services have a free-tier that allows developers to take the services for a test run without incurring any costs. I'll attempt to point out the thresholds that fall within this free-tier, and steer the project in a direction that won't require any initial investment when possible. As of the writing of this book, the following services are provided on the free tier with the given limitations. 
 
+* Amazon Simple Storage Service (S3) - 5 GB Storage
 * Amazon DynamoDB - 25 GB Storage
-* Amazon EC2 - 750 Hours of compute time per month
+* Amazon Elastic Compute Cloud (EC2) - 750 Hours of compute time per month on a t2.micro instance
 * Amazon RDS - 750 Hours per month of a db.t2.micro database server
 * AWS Lambda - 1 Million free requests per month
 
 ### 2.3.1 Signing up for AWS
+
+Navigate to the following url to signup for your free-tier AWS account. 
+https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start
+
+Enter your information, and follow the directions to the next page to enter your contact information. When choosing an account type, you should choose personal to begin with, then proceed to the billing page.
+
+The billing page is going to ask you for your credit card information. Don't be alarmed, this information is only required if your usage exceeds the free tier limits as discussed above. You can look into advanced features of AWS that allow you to send alerts if usage is approaching the limits so you can make a decision to disable the service if necessary.
+
+Once you input your billing information, you'll be asked to provide a phone number for verification. You'll get a call from AWS to verify a pin number presented to you on the sign up page. Just input the number, and you'll be successully verified and taken the the support plan page.
+
+Choose the "Basic Plan" since we won't initially need support from Amazon, however, if you do need support in the future, you can choose to change plans to the one that works for your situation.
+
+If everything goes well, you'll be presented with the following welcome page. From here, you can sign into the AWS Console where you'll manage all the services by clicking the "Sign In to the Console" button.
+
+You'll be taken to the login page. Input the email you used during signup, then click 'Next' to be taken to the password page.
+
+Finally, if the login succeeded, you'll be shown the AWS Console Dashboard page. You can choose to initialize, modify, and monitor all of the services provided by AWS. 
+
+Congratulations, you've successfully signed up for Amazon Web Services!!! Everything you need to be successful is now at your fingertips. 
+
+To being, We're going to be setting up the Simple Storage Service, or more commonly known as S3, for use in our application to store uploaded media from customers.  
 
 ### 2.3.2 Simple Storage Service (S3)
 
