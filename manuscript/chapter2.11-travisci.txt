@@ -1,2 +1,1 @@
-## 2.11
- Travis-CI
+## 2.11 Travis-CI
