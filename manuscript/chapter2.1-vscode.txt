@@ -14,7 +14,7 @@ Download the appropriate installer for your operating system from
 
 and follow the instructions to install Visual Studio Code. 
 
-{height=20%,float=center}
+{height=20%}
 ![Visual Studio Code Download](images/chapter2.1-vscode/download-vs-code.jpg)
 
 For Mac, you unzip the downloaded file, and drag the Visual Studio Code application directly into the Applications folder. 
@@ -39,7 +39,7 @@ For Ubuntu, or Debian, there are multiple ways to install the downloaded deb fil
 
 Once installed, you should open Visual Studio Code, and see the following screen:
 
-{width=50%,float=center}
+{height=20%,float=center}
 ![Visual Studio Code Welcome Page](images/chapter2.1-vscode/welcome.jpg)
 
 ### 2.1.2 Installing Extensions
@@ -51,14 +51,14 @@ There's an extension button on the Visual Studio side nav that gives you access 
 {float=left}
 ![Extensions Button](images/chapter2.1-vscode/extension-button.jpg)
 
-This will take you to the extensions panel as seen to the left. 
+This will take you to the extensions panel as seen to the below. 
 
-{height=30%,float=left}
+{height=20%}
 ![Extensions Panel](images/chapter2.1-vscode/extension-panel.jpg)
 
 In order to install an extension, search the marketplace to find the exentions, then click on the green install button, and follow the directions.
 
-{width=50%,float=left}
+{height=20%}
 ![Extensions Panel](images/chapter2.1-vscode/install-extension.jpg)
 
  After the installation, the install button will become a reload button. Clicking on the reload button will restart Visual Studio Code with the new extension activated. The restart will maintain your current environment.
