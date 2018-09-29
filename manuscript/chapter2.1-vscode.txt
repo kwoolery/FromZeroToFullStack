@@ -39,7 +39,7 @@ For Ubuntu, or Debian, there are multiple ways to install the downloaded deb fil
 
 Once installed, you should open Visual Studio Code, and see the following screen:
 
-{height=20%,float=center}
+{height=20%}
 ![Visual Studio Code Welcome Page](images/chapter2.1-vscode/welcome.jpg)
 
 ### 2.1.2 Installing Extensions
@@ -48,17 +48,15 @@ One of the advantages of Visual Studio Code is the unlimited functionality provi
 
 There's an extension button on the Visual Studio side nav that gives you access to the extensions panel. The installation of extensions is extremely easy. First, find the extensions button on the left hand side nav, and click it, or choose View->Extensions from the top level menu. 
 
-{float=left}
 ![Extensions Button](images/chapter2.1-vscode/extension-button.jpg)
 
 This will take you to the extensions panel as seen to the below. 
 
-{height=20%}
+{width=30%, float=left}
 ![Extensions Panel](images/chapter2.1-vscode/extension-panel.jpg)
 
 In order to install an extension, search the marketplace to find the exentions, then click on the green install button, and follow the directions.
 
-{height=20%}
 ![Extensions Panel](images/chapter2.1-vscode/install-extension.jpg)
 
  After the installation, the install button will become a reload button. Clicking on the reload button will restart Visual Studio Code with the new extension activated. The restart will maintain your current environment.
