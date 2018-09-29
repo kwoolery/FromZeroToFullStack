@@ -48,12 +48,12 @@ One of the advantages of Visual Studio Code is the unlimited functionality provi
 
 There's an extension button on the Visual Studio side nav that gives you access to the extensions panel. The installation of extensions is extremely easy. First, find the extensions button on the left hand side nav, and click it, or choose View->Extensions from the top level menu. 
 
-{width=20%,float=left}
+{float=left}
 ![Extensions Button](images/chapter2.1-vscode/extension-button.jpg)
 
 This will take you to the extensions panel as seen to the left. 
 
-{width=50%,float=left}
+{height=30%,float=left}
 ![Extensions Panel](images/chapter2.1-vscode/extension-panel.jpg)
 
 In order to install an extension, search the marketplace to find the exentions, then click on the green install button, and follow the directions.
