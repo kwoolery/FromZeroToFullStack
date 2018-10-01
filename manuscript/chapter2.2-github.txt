@@ -4,9 +4,33 @@ Github is a web-based hosting service used for version control using Git, primar
 
 Github allows for a central storage location of the repository while still maintaining Git's peer-to-peer ethos. Github has become the repository of choice, and is used by many external services to sync, and distribute updated code. Github is more than just a centralized repository though, it's a code base management system as well, allowing functional owners to manage issues, patching, requests for changes, and documentation. 
 
-### Github setup instructions
+### Github Setup Instructions
 
 Go to the Github sign up page at <https://github.com/join?source=login>
+
+{width=40%, float=center}
+![Extensions Panel](images/chapter2.2-github/signup.jpg)
+
+From the Github signup page, select a unique username, input your email, and a password, and click the "Create an account" button. If the username is available, you'll proceed to the choose a plan page. 
+
+{width=40%, float=center}
+![Extensions Panel](images/chapter2.2-github/chooseplan.jpg)
+
+For the purposes of setting up our project, you should choose the option that enables you to have an unlimited number of public projects. Github is a popular choice for a centralized repository for many open source projects, however, there are times you may want to keep your repository private, in which case, Github provides a paid account type that allows you to choose which repositories are made available to the public. Keep in mind, you, as the account owner, still control access to your public repositories, and can accept or reject pull requests based on your own requirements. Once you choose your plan, click on the Continue button. The final page will allow you to tailor your experience.
+
+{width=40%, float=center}
+![Extensions Panel](images/chapter2.2-github/tailorexperience.jpg)
+
+You can choose to answer the questions on this page, or skip this page. Some of the answers may allow Github to promote certain features to you in order to make your experience with Github more streamlined, but it's not required to use the service. Once you've completed this form, click the Submit button, or the "skip this step" link.
+
+Once you complete the signup process, you'll end up on the repositories landing page, where you can navigate into your own repositories, or stay up-to-date on the repositories you've starred, or watched. 
+
+{width=40%, float=center}
+![Extensions Panel](images/chapter2.2-github/landing.jpg)
+
+### Creating a Github Project
+
+
 
 ### Importing Project into Visual Studio code
 New Visual Studio Code window -> Start -> Open folder
