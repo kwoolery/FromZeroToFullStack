@@ -78,9 +78,79 @@ We'll mostly be dealing with S3 in an automated fashion throughout the rest of t
 
 ### 2.3.3 Elastic Compute Cloud (EC2)
 
-### 2.3.4 Elastic Beanstalk
+Amazon EC2 is a scalable computing platform that provides virtual server instances for quickly scaling based on your application requirements. When launching an EC2 server, you can decide the type of machine, and the software that is preloaded by using an Amazon Machine Image (AMI). You can start with a fully loaded instance, or you can start with a barebones instance and add all the requirements yourself, and save your image as an AMI for quickly launching new instances with your requirements built in. If you need detailed information about all the features EC2 offers, you can read the EC2 documentation at <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html>. We'll mostly focus on setting up a single free-tiered instance to host our server-side application.
 
-### 2.3.5 DynamoDB
+The first step is to navigate to the EC2 Dashboard by searching for the service name in the Services dropdown from anywhere in the AWS console. You should find yourself on the EC2 Dashboard. 
+
+!!! Insert EC2 Dashboard Image !!!
+
+Once on the EC2 Dashboard, click the Launch Instance button. You'll start the process of building your EC2 instance by first choosing which AMI to use. You can choose from a variety of available images, either for free, or you can navigate in the AWS Marketplace for exactly what you may be looking for. Keep in mind that the Marketplace images will typically charge based on compute time usage. For this project, we're going to go with one of the Quick Start images, and install what we need from scratch. 
+
+!!! Insert Ubuntu Image Selection !!!
+
+We want to make sure the image we choose is marked as Free Tier Eligible. For this project, you should use the Ubuntu Server 18.04 LTS (HVM), SSD Volume Type - ami-0ac019f4fcb7cb7e6 image. Click on the Select button to continue to Choose an Instance Type step.
+
+!!! Insert Image of Instance Type Selector !!!
+
+By default, the free tier t2.micro instance will be selected. If you want more information about the EC2 instance types, you can find details about the dozens of types at <https://aws.amazon.com/ec2/instance-types/>. The t2.micro is a single CPU virtual machine with 1GB of RAM. It's not a powerhouse, and wouldn't typically be suitable for a production application, however it's ideal for free prototyping, and it's free, which is a huge bonus. For this project, we're going to use the default configuraion settings, we do have to update the default security group though. You can get to the security group page by clicking on the Configure Security Group tab on the top progress bar. 
+
+!!! Insert image of Security Group Tab !!!
+
+Security groups on AWS are extremely flexible and allow you control port level access to your virtual servers. By default the SSH port 22 is open to all IP addresses. We'll leave that in place for now. 
+
+!!! Insert Image of Review Page !!!
+
+You'll notice a warning about limiting access to specific IP addresses from the review page. We're going to be accessing this server from mobile devices, and web browsers, so we need to make sure to allow all IP addresses. You'll see a warning about closing off access to all IP addresses. If you know your local IP address, it may make sense to limit SSH access, but for now, we'll leave this setting alone. Click on the Add Rule button.
+
+!!! Insert image of Add Rule Row !!!
+
+In order for our application to communicate with our server, we're going to need a port open to the public. Leave the type set to Custom TCP, change the Port Range value to 11373, and update the CIDR input to use 0.0.0.0/0. Use "Coffee Ranker App Comm Channel" for the description. Once you've setup the security rule, click on the blue Review and Launch button. 
+
+On the Review Page, you'll once again be presented with the security warning about your server being open to the world. Once you've reviewed, launched, and accessed your server, you can choose to come back and update the security restrictions, but for this application, we're going to accept the risks, however, in a real world environment, you would absolutely want to limit access in order to avoid any security risks. 
+
+!!! Insert review image !!!
+
+The most important thing to review is to make sure the instance type you've selected is t2.micro. Anything else in the instance type will cost you based on compute type, so confirm that you have the free tier instance selected. If all the other information looks accurate in the Review page, go ahead and click the Launch button. You should get a dialog asking you to select or create a new key pair. 
+
+!!! Insert Key Pair Image !!!
+
+In order to provide an additional level of security, AWS requires a key pair to access the EC2 instances, at least initially. You can create a new key pair from this dialog. From the top dropdown, choose the "Create a key pair" option. This option will require you to name your key pair. For this key pair, set "Coffee Ranker Key Pair" as the name, then click on the Download Key Pair button. Store the downloaded pem file in a secure location, because you won't be able to download this file again. If you lose the file, you'll have to go about creating a new key pair, and updating the instance.
+
+Once you have the key pair in a safe location, click on the Launch Instances button in the overlay. If everything went as expected, you should be taken to a Launch Status page. 
+
+!!! Insert Launche Status Image !!!
+
+You can check on the instance by clicking on the instance link in the box with the title "Your instances are now launching." Once you click on the button, you'll be taken to the instances listing page. This is where you will access all of your running instances. You should see your new server, and the current instance state. 
+
+In order to connect to your newly launced server, you need to ssh into the machine by using the key pair file you downloaded earlier. If you select the instance, and click the Connect button, you'll be presented with detailed instructions on how to connect. 
+
+!!! Image of Connect Instructions !!!
+
+The following instructions for connecting are specific to Mac, and Linux, with a slight variation for Windows with Cygwin. If you're using something like PuTTY for Windows, you'll have to find the instuctions for connecting over SSH using a private key pair. 
+
+The first step is to make sure the pem file you downloaded is in the correct location, and has the appropriate restricted permissions. You can do this by opening a terminal window, finding the pem file, and copying it to the .ssh directory in your home directory. Once the file is in the .ssh directory, run the following to change permissions. 
+
+```
+chmod 400 CoffeeRankerKeyPair.pem
+```
+
+This will give only your user access to read the file. You can now move up to your home directory, and access your server. Remember, your server hostname will be different than what is used in this example, just replace it with your hostname, and you should be able to access your server. You should also note the actual filename of the pem file. Run the following, or a variation based on your settings.
+
+```
+ssh -i ~/.ssh/CoffeeRankerKeyPair.pem ubuntu@ec2-54-165-222-48.compute-1.amazonaws.com
+```
+
+Since this is the first time you'll be accessing the server, you'll be presented with the following question. Type 'yes' to proceed. 
+
+```
+The authenticity of host 'ec2-54-165-222-48.compute-1.amazonaws.com (54.165.222.48)' can't be established.
+ECDSA key fingerprint is SHA256:rP1PWuDqGRzSQeAoGHBmocJl1P+Ol526oJ+NGZ9wA6I.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+If you've setup everything correctly, you should get access to the command line prompt as the 'ubuntu' default user.  Congratulations, you've successfully setup your first EC2 server instance!
+
+### 2.3.4 DynamoDB
 
 ### 2.3.5 Relational Database Service (RDS)
 
