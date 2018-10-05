@@ -49,10 +49,7 @@ chapter8-implementation.txt
 chapter9-deployment.txt
 chapter10-testing.txt
 chapter11-debugging.txt
-appendixA.1-macosvscodekeys.txt
-appendixA.2-windowsvscodekeys.txt
-appendixA.3-linuxvscodekeys.txt
-appendixB-gitcommand.txt
-appendixC-markdown.txt
+appendixA-gitcommand.txt
+appendixB-markdown.txt
 
 
