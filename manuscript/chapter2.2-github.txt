@@ -83,17 +83,17 @@ The very basic example above will just format the 'Coffee Shop Ranker' as a head
 Once you update the README.md file, you should see a little blue numeric indicator on the Version Control icon in the left sidebar of Visual Studio Code. This number indicates how many files differ from what is currently checked into the active Git branch. 
 
 {width=50%,float=center}
-![Master Branch Indicator](images/chapter2.2-github/firstcheckin.jpg)
+![First Checkin](images/chapter2.2-github/firstcheckin.jpg)
 
 Clicking on this icon takes you to a list of files that have been changed. If the list looks good, in this case you should see README.md in the list, add a message, and click the checkmark above the message. 
 
 {float=center}
-![Master Branch Indicator](images/chapter2.2-github/vs-code-git-checkmark.jpg)
+![VS Code Git Checkmark](images/chapter2.2-github/vscode-git-checkmark.jpg)
 
 This will save the file in the local master branch, or whichever branch is currently selected. Once the file is saved locally, you should get an indicator on the bottom left corner next to the "master" that indicates that there are changes ready to push up to the remote repository, in this case Github. If you click on the up arrow, the file will be synced to the remote repository.
 
 {float=center}
-![Master Branch Indicator](images/chapter2.2-github/vs-code-branch-diff-indicator.jpg)
+![VS Code Diff Indicator](images/chapter2.2-github/vscode-branch-diff-indicator.jpg)
 
 If there's a problem pushing to github because you get a permission denied error. Try opening up a Terminal from the top menu by clicking on View -> Terminal. You can reset your git remote origin by running the following:
 
@@ -108,7 +108,7 @@ Where truvukevin is the username you created the repository with. When you push 
 If all is successful, and you navigate to your github repository homepage, you can see the file you just changed has been uploaded, and the markdown has been formatted. You should see something similar to figure <nnn>.
 
 {width=85%}
-![Repositry with README.md](images/chapter2.2-github/readme.jpg)
+![Repository with README.md](images/chapter2.2-github/readme.jpg)
 
 ### Making a Mistake and Reverting
 Add the following to end of the README.md file.
