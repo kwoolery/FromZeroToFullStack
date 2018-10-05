@@ -137,7 +137,7 @@ On the Review Page, you'll once again be presented with the security warning abo
 The most important thing to review is to make sure the instance type you've selected is t2.micro. Anything else in the instance type will cost you based on compute type, so confirm that you have the free tier instance selected. If all the other information looks accurate in the Review page, go ahead and click the Launch button. You should get a dialog asking you to select or create a new key pair. 
 
 {width=85%}
-![EC2 Select Key Pair](images/chapter2.3-aws/ec2/ec2-select-key-pair.png)
+![EC2 Select Key Pair](images/chapter2.3-aws/ec2/ec2-select-keypair.png)
 
 In order to provide an additional level of security, AWS requires a key pair to access the EC2 instances, at least initially. You can create a new key pair from this dialog. From the top dropdown, choose the "Create a key pair" option. This option will require you to name your key pair. For this key pair, set "Coffee Ranker Key Pair" as the name, then click on the Download Key Pair button. Store the downloaded pem file in a secure location, because you won't be able to download this file again. If you lose the file, you'll have to go about creating a new key pair, and updating the instance.
 
