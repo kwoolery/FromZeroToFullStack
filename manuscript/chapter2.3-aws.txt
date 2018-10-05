@@ -15,8 +15,8 @@ For this project, we'll be using AWS for media file storage, serving our API, as
 Navigate to the following url to signup for your free-tier AWS account: 
 <https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start>
 
-{width=85%, float=center}
-![AWS Signup Page](images/chapter2.3-aws/aws-signup.jpg)
+{width=50%, float=left}
+![AWS Signup Page](images/chapter2.3-aws/aws-signup.png)
 
 Enter your information, and follow the directions to the next page to enter your contact information. When choosing an account type, you should choose personal to begin with, then proceed to the billing page.
 
@@ -27,27 +27,27 @@ Once you input your billing information, you'll be asked to provide a phone numb
 Choose the "Basic Plan" since we won't initially need support from Amazon, however, if you do need support in the future, you can choose to change plans to the one that works for your situation.
 
 {width=85%, float=center}
-![AWS Support Plan](images/chapter2.3-aws/aws-support-plan.jpg)
+![AWS Support Plan](images/chapter2.3-aws/aws-support-plan.png)
 
 If everything goes well, you'll be presented with the following welcome page. From here, you can sign into the AWS Console where you'll manage all the services by clicking the "Sign In to the Console" button.
 
 {width=85%, float=center}
-![AWS Welcome Page](images/chapter2.3-aws/aws-welcome.jpg)
+![AWS Welcome Page](images/chapter2.3-aws/aws-welcome.png)
 
 You'll be taken to the login page. 
 
 {width=85%, float=center}
-![AWS Sign In](images/chapter2.3-aws/aws-signin.jpg)
+![AWS Sign In](images/chapter2.3-aws/aws-signin.png)
 
 Input the email you used during signup, then click 'Next' to be taken to the password page.
 
 {width=85%, float=center}
-![AWS Password](images/chapter2.3-aws/aws-password.jpg)
+![AWS Password](images/chapter2.3-aws/aws-password.png)
 
 Finally, if the login succeeded, you'll be shown the AWS Console Dashboard page. You can choose to initialize, modify, and monitor all of the services provided by AWS. 
 
 {width=85%, float=center}
-![AWS Dashboard](images/chapter2.3-aws/aws-dashboard.jpg)
+![AWS Dashboard](images/chapter2.3-aws/aws-dashboard.png)
 
 Congratulations, you've successfully signed up for Amazon Web Services!!! Everything you need to be successful is now at your fingertips. 
 
@@ -87,7 +87,7 @@ You can choose different storage options from the properties page, and whether t
 
 If everything looks good, click on the Upload button. Once the upload is successful, you should see the file listed in the directory. Clicking on the filename will take you to the overview page for that file. 
 
-There are various actions that can be taken on the file such as downloading the file directly, or making the file public if it's not already. If you click open, you'll be able to see the contents of the file in your browser, even if the file is private. However, if the file is public, you'll be presented with a Link at the bottom of the page. You should see something similar to https://s3.amazonaws.com/kevintruvu.coffeeshopranker/testfolder/graph.jpg. It should become obvious now why the bucket name is so critical, all objects in S3 standard storage are accessible via the s3.amazonaws.com hostname, where the top level directory is your bucket name. 
+There are various actions that can be taken on the file such as downloading the file directly, or making the file public if it's not already. If you click open, you'll be able to see the contents of the file in your browser, even if the file is private. However, if the file is public, you'll be presented with a Link at the bottom of the page. You should see something similar to https://s3.amazonaws.com/kevintruvu.coffeeshopranker/testfolder/graph.png. It should become obvious now why the bucket name is so critical, all objects in S3 standard storage are accessible via the s3.amazonaws.com hostname, where the top level directory is your bucket name. 
 
 If you were able to see the file in a browser, congratulations, you've successfully setup S3, and you now have the ability to upload and view media from a public url with only a few steps. 
 
@@ -100,58 +100,58 @@ Amazon EC2 is a scalable computing platform that provides virtual server instanc
 The first step is to navigate to the EC2 Dashboard by searching for the service name in the Services dropdown from anywhere in the AWS console. You should find yourself on the EC2 Dashboard. 
 
 {width=85%, float=center}
-![EC2 Dashboard](images/chapter2.3-aws/ec2/ec2-landing.jpg)
+![EC2 Dashboard](images/chapter2.3-aws/ec2/ec2-landing.png)
 
 Once on the EC2 Dashboard, click the Launch Instance button. You'll start the process of building your EC2 instance by first choosing which AMI to use. You can choose from a variety of available images, either for free, or you can navigate in the AWS Marketplace for exactly what you may be looking for. Keep in mind that the Marketplace images will typically charge based on compute time usage. For this project, we're going to go with one of the Quick Start images, and install what we need from scratch. 
 
 {width=85%, float=center}
-![EC2 Choose AMI](images/chapter2.3-aws/ec2/ec2-step1-ami.jpg)
+![EC2 Choose AMI](images/chapter2.3-aws/ec2/ec2-step1-ami.png)
 
 We want to make sure the image we choose is marked as Free Tier Eligible. For this project, you should use the Ubuntu Server 18.04 LTS (HVM), SSD Volume Type - ami-0ac019f4fcb7cb7e6 image. Click on the Select button to continue to Choose an Instance Type step.
 
 {width=85%, float=center}
-![EC2 Ubuntu Selection](images/chapter2.3-aws/ec2/ec2-ubuntu-choose.jpg)
+![EC2 Ubuntu Selection](images/chapter2.3-aws/ec2/ec2-ubuntu-choose.png)
 
 By default, the free tier t2.micro instance will be selected. If you want more information about the EC2 instance types, you can find details about the dozens of types at <https://aws.amazon.com/ec2/instance-types/>. The t2.micro is a single CPU virtual machine with 1GB of RAM. It's not a powerhouse, and wouldn't typically be suitable for a production application, however it's ideal for free prototyping, and it's free, which is a huge bonus. For this project, we're going to use the default configuraion settings, we do have to update the default security group though. You can get to the security group page by clicking on the Configure Security Group tab on the top progress bar. 
 
 {width=85%, float=center}
-![EC2 Security Group Tab](images/chapter2.3-aws/ec2/ec2-configure-security-tab.jpg)
+![EC2 Security Group Tab](images/chapter2.3-aws/ec2/ec2-configure-security-tab.png)
 
 Security groups on AWS are extremely flexible and allow you control port level access to your virtual servers. By default the SSH port 22 is open to all IP addresses. We'll leave that in place for now. 
 
 {width=85%, float=center}
-![EC2 Security Warning](images/chapter2.3-aws/ec2/ec2-security-warning.jpg)
+![EC2 Security Warning](images/chapter2.3-aws/ec2/ec2-security-warning.png)
 
 You'll notice a warning about limiting access to specific IP addresses from the review page. We're going to be accessing this server from mobile devices, and web browsers, so we need to make sure to allow all IP addresses. You'll see a warning about closing off access to all IP addresses. If you know your local IP address, it may make sense to limit SSH access, but for now, we'll leave this setting alone. Click on the Add Rule button.
 
 {width=85%, float=center}
-![EC2 Security Add Rule](images/chapter2.3-aws/ec2/ec2-security-add-port.jpg)
+![EC2 Security Add Rule](images/chapter2.3-aws/ec2/ec2-security-add-port.png)
 
 In order for our application to communicate with our server, we're going to need a port open to the public. Leave the type set to Custom TCP, change the Port Range value to 11373, and update the CIDR input to use 0.0.0.0/0. Use "Coffee Ranker App Comm Channel" for the description. Once you've setup the security rule, click on the blue Review and Launch button. 
 
 On the Review Page, you'll once again be presented with the security warning about your server being open to the world. Once you've reviewed, launched, and accessed your server, you can choose to come back and update the security restrictions, but for this application, we're going to accept the risks, however, in a real world environment, you would absolutely want to limit access in order to avoid any security risks. 
 
 {width=85%, float=center}
-![EC2 Review Page](images/chapter2.3-aws/ec2/ec2-review-2.jpg)
+![EC2 Review Page](images/chapter2.3-aws/ec2/ec2-review-2.png)
 
 The most important thing to review is to make sure the instance type you've selected is t2.micro. Anything else in the instance type will cost you based on compute type, so confirm that you have the free tier instance selected. If all the other information looks accurate in the Review page, go ahead and click the Launch button. You should get a dialog asking you to select or create a new key pair. 
 
 {width=85%, float=center}
-![EC2 Select Key Pair](images/chapter2.3-aws/ec2/ec2-select-keypair.jpg)
+![EC2 Select Key Pair](images/chapter2.3-aws/ec2/ec2-select-keypair.png)
 
 In order to provide an additional level of security, AWS requires a key pair to access the EC2 instances, at least initially. You can create a new key pair from this dialog. From the top dropdown, choose the "Create a key pair" option. This option will require you to name your key pair. For this key pair, set "Coffee Ranker Key Pair" as the name, then click on the Download Key Pair button. Store the downloaded pem file in a secure location, because you won't be able to download this file again. If you lose the file, you'll have to go about creating a new key pair, and updating the instance.
 
 Once you have the key pair in a safe location, click on the Launch Instances button in the overlay. If everything went as expected, you should be taken to a Launch Status page. 
 
 {width=85%, float=center}
-![EC2 Launch Status](images/chapter2.3-aws/ec2/ec2-launch-status.jpg)
+![EC2 Launch Status](images/chapter2.3-aws/ec2/ec2-launch-status.png)
 
 You can check on the instance by clicking on the instance link in the box with the title "Your instances are now launching." Once you click on the button, you'll be taken to the instances listing page. This is where you will access all of your running instances. You should see your new server, and the current instance state. 
 
 In order to connect to your newly launced server, you need to ssh into the machine by using the key pair file you downloaded earlier. If you select the instance, and click the Connect button, you'll be presented with detailed instructions on how to connect. 
 
 {width=85%, float=center}
-![EC2 Connection Instructions](images/chapter2.3-aws/ec2/ec2-connect-instructions.jpg)
+![EC2 Connection Instructions](images/chapter2.3-aws/ec2/ec2-connect-instructions.png)
 
 The following instructions for connecting are specific to Mac, and Linux, with a slight variation for Windows with Cygwin. If you're using something like PuTTY for Windows, you'll have to find the instuctions for connecting over SSH using a private key pair. 
 
@@ -185,34 +185,34 @@ For more information about the details of DynamoDB, please visit <https://docs.a
 The first step in setting up DynamoDB is navigate to the DynamoDB Dashboard, and setup a new table for our datastore.
 
 {width=85%, float=center}
-![DynamoDB Landing](images/chapter2.3-aws/dynamodb/dynamodb-landing.jpg)
+![DynamoDB Landing](images/chapter2.3-aws/dynamodb/dynamodb-landing.png)
 
 Once you're on the Dashboard, click on the Create Table button. We'll go into much more detail in the section on Datastore Design, however, to get a feel for DynamoDB, we'll create a very simple table to begin with that holds the User Inforamtion. 
 
 {width=85%, float=center}
-![DynamoDB Create Table](images/chapter2.3-aws/dynamodb/dynamodb-create-table.jpg)
+![DynamoDB Create Table](images/chapter2.3-aws/dynamodb/dynamodb-create-table.png)
 
 Enter "Users" into the Table name input field. Enter "UserID" into the Primary key field, and change the type dropdown to Number. This sets the primary key to UserID, which will be used to directly access the User information. Make sure the Add sort key checkbox is checked, and input "Location" as the sort key, and make sure the type dropdown is set to String. Make sure that the Use default settings checkbox is checked. Click on the Create button. This will create a very basic table we can use for testing access when setting up our middle-tier. 
 
 Once the table is created successfully, you should see the following Tables management screen. You can check the status of the table from here, as well as managing backups, inserting items, searching for items, managing alerts, and setting up indexes. We'll go into more detail on these functions in the section on datastore design.  
 
 {width=85%, float=center}
-![DynamoDB Table Created](images/chapter2.3-aws/dynamodb/dynamodb-table-created.jpg)
+![DynamoDB Table Created](images/chapter2.3-aws/dynamodb/dynamodb-table-created.png)
 
 Make sure your newly created Users table is selected, and click on the Items tab on the right panel. 
 
 {width=85%, float=center}
-![DynamoDB Items Tab](images/chapter2.3-aws/dynamodb/dynamodb-item-listing-before.jpg)
+![DynamoDB Items Tab](images/chapter2.3-aws/dynamodb/dynamodb-item-listing-before.png)
 
 Click on the Create Item button. You will be presented with the following overlay, where you can add a new item directly into the database. In order to 
 
 {width=85%, float=center}
-![DynamoDB Create Item](images/chapter2.3-aws/dynamodb/dynamodb-create-item.jpg)
+![DynamoDB Create Item](images/chapter2.3-aws/dynamodb/dynamodb-create-item.png)
 
 Insert a number into the UserID field, and a location string into the Location field. Click on the plus button to the left of Location, and choose Append, and select String. A new field will appear below Location. Call this field Username, and set the value to a username of your choosing. One major benefit of a NoSQL database is the ability to define fields on demand without having to manage updating large schema. This allows a developer to make an application decision at design time, and again at run time if necessary in order to store the necessary data for a new feature without having to retrofit existing databases, or having to update queries in the application. Click on the Save button, and you should see your newly input record in the Items list. 
 
 {width=85%, float=center}
-![DynamoDB Items Listing](images/chapter2.3-aws/dynamodb/dynamodb-item-listing.jpg)
+![DynamoDB Items Listing](images/chapter2.3-aws/dynamodb/dynamodb-item-listing.png)
 
 Congratulations, you've now setup your first NoSQL database table for use in the application. 
 
