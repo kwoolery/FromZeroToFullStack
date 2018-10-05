@@ -1,4 +1,4 @@
-# Git Commands
+# Appendix A. Git Commands
 *From https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf*
 
 ## MAKE CHANGES

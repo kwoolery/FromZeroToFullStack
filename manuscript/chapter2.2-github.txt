@@ -7,37 +7,37 @@ Github allows for a central storage location of the repository while still maint
 ### Github Setup Instructions
 Go to the Github sign up page at <https://github.com/join?source=login>
 
-{width=85%}
+{width=85%, float=center}
 ![Signup for Github](images/chapter2.2-github/signup.jpg)
 
 From the Github signup page, select a unique username, input your email, and a password, and click the "Create an account" button. If the username is available, you'll proceed to the choose a plan page. 
 
-{width=85%}
+{width=85%, float=center}
 ![Choose a Github Plan](images/chapter2.2-github/chooseplan.jpg)
 
 For the purposes of setting up our project, you should choose the option that enables you to have an unlimited number of public projects. Github is a popular choice for a centralized repository for many open source projects, however, there are times you may want to keep your repository private, in which case, Github provides a paid account type that allows you to choose which repositories are made available to the public. Keep in mind, you, as the account owner, still control access to your public repositories, and can accept or reject pull requests based on your own requirements. Once you choose your plan, click on the Continue button. The final page will allow you to tailor your experience.
 
-{width=85%}
+{width=85%, float=center}
 ![Tailor Github Experience](images/chapter2.2-github/tailorexperience.jpg)
 
 You can choose to answer the questions on this page, or skip this page. Some of the answers may allow Github to promote certain features to you in order to make your experience with Github more streamlined, but it's not required to use the service. Once you've completed this form, click the Submit button, or the "skip this step" link.
 
 Once you complete the signup process, you'll end up on the repositories landing page, where you can navigate into your own repositories, or stay up-to-date on the repositories you've starred, or watched. 
 
-{width=85%}
+{width=85%, float=center}
 ![Github Repositories Landing Page](images/chapter2.2-github/landing.jpg)
 
 ### Creating a Github Project
 From the landing page, click on the "Start a project" button. You'll be presented with the following screen that will guide you in the process of creating a new repository.
 
-{width=85%}
+{width=85%, float=center}
 ![Start a Project](images/chapter2.2-github/startproject.jpg)
 
 For the project, in this book, go ahead and input "coffeeshopranker" as the Repository name. Keep the public repository option selected. Leave the option to initialize the repository with a README file unselected. Github uses the README file as a landing page for your repository. We'll create, and update this file in a later section when we're importing our project into Visual Studio Code. Click on the "Create repository" button. 
 
 You should be taken to the following repository landing page. 
 
-{width=85%}
+{width=85%, float=center}
 ![Repository Landing Page](images/chapter2.2-github/poststartproject.jpg)
 
 Congratulations, you've successfully created a project on Github! Now it's time to jump into Visual Studio Code, and start adding files to your repository. 
@@ -45,7 +45,7 @@ Congratulations, you've successfully created a project on Github! Now it's time 
 ### Importing Project into Visual Studio code
 Open a new Visual Studio Code Window. 
 
-{width=85%}
+{width=85%, float=center}
 ![Visual Studio Code Welcome Page](images/chapter2.1-vscode/welcome.jpg)
 
 From the top menu bar, select View -> Command Palette, and type 'Git: Clone', then press the 'enter' key. You'll be presented with an input box to enter your repository url. You can find the URL on the Github repository landing page. Make sure HTTPS is selected, and copy the url presented, it should look something similar to the URL for my version of the project.  
@@ -54,12 +54,12 @@ From the top menu bar, select View -> Command Palette, and type 'Git: Clone', th
 
 After you press the 'enter' key, you should be presented with a directory selector window. You can choose an existing directory, or create a new directory in the location of your choosing. Call the new directory 'coffeeshopranker' and click the "Select Repository Location" button. 
 
-{width=85%}
+{width=85%, float=center}
 ![Select a Repository Location](images/chapter2.2-github/selectrepositorylocation.jpg)
 
 If the clone is successful, you'll be asked to open the cloned repository in the bottom right hand corner of Visual Studio Code. Click on the "Open Repository" button to be taken to the project landing sceen. 
 
-{width=85%}
+{width=85%, float=center}
 ![Select a Repository Location](images/chapter2.2-github/projectpage.jpg)
 
 If you see a page similar to this, then congratulations, you've connected your local Visual Studio Code project repository to the remote Github repository! 
@@ -75,7 +75,7 @@ Click on the add file icon, and name the file README.md. This uses a special typ
 First commit of README.md file.
 ```
 
-{width=85%}
+{width=85%, float=center}
 ![Add README.md](images/chapter2.2-github/readmefile.jpg)
 
 The very basic example above will just format the 'Coffee Shop Ranker' as a header with larger, bold font, while the second line will be formatted as plain text. Please see Appendix D for a Markdown reference.
@@ -107,7 +107,7 @@ Where truvukevin is the username you created the repository with. When you push 
 
 If all is successful, and you navigate to your github repository homepage, you can see the file you just changed has been uploaded, and the markdown has been formatted. You should see something similar to figure <nnn>.
 
-{width=85%}
+{width=85%, float=center}
 ![Repositry with README.md](images/chapter2.2-github/readme.jpg)
 
 ### Making a Mistake and Reverting
