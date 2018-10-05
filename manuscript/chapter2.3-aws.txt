@@ -38,13 +38,13 @@ To being, We're going to be setting up the Simple Storage Service, or more commo
 
 ### 2.3.2 Simple Storage Service (S3)
 
-Amazon S3 is a massively scalable object storage system built to store and retrieve any amount of data from anywhere. It can be used as a simple key-value store, or as a full-blown filesystem where files can be accessed directly given a fully qualified path. It can even be setup to serve a static website with automatic index, and error pages, and redirects if necessary. We're not going to go into all of the features of S3 in this section, since there are an infinite number of options for storage, access, security, metadata, etc. If you're interested in knowing more about S3, I would recommend reading the Amazon S3 FAQ at https://aws.amazon.com/s3/faqs/?nc=sn&loc=6. 
+Amazon S3 is a massively scalable object storage system built to store and retrieve any amount of data from anywhere. It can be used as a simple key-value store, or as a full-blown filesystem where files can be accessed directly given a fully qualified path. It can even be setup to serve a static wEBite with automatic index, and error pages, and redirects if necessary. We're not going to go into all of the features of S3 in this section, since there are an infinite number of options for storage, access, security, metadata, etc. If you're interested in knowing more about S3, I would recommend reading the Amazon S3 FAQ at https://aws.amazon.com/s3/faqs/?nc=sn&loc=6. 
 
 In order to setup S3 for our use, we need to navigate to the S3 management console. From anywhere in the AWS Console, you can pull down the "Services" menu at the top left, and either choose S3 from the "Storage" second, or you can start typing S3 in the "Find a service by name or feature" input box. 
 
 When you navigate to the S3 console for the first time, you'll see that you don't have any buckets. Buckets are globally unique containers for everything you store in Amazon S3. A globally unique container means that you must create a name for your bucket that nobody else has ever used. If you choose common words, AWS will probably complain that someone has used that name before. 
 
-Here are two acceptible strategies for determining bucket names. The first, and simplest is to use your username as a prefix to the bucket name. In my case, my username is kevintruvu, so all of my buckets will have the name kevintruvu.<name of my bucket>. The likelyhood that someone has used this bucket name is much lower, since my username is unique to AWS as well. The second strategy should be used when you want to make the contents of the bucket available publicly by way of a unique hostname you have access to. This is helpful when hosting static websites from S3, but can be used for media delivery as well. An example would be if I wanted to have all the files in the bucket accessible from http://media.example.com/. In this case, I would name my bucket media.example.com, and setup a CNAME record for media.example.com to point to the appropriate S3 url (!!!FILL IN S3 URL!!!). 
+Here are two acceptible strategies for determining bucket names. The first, and simplest is to use your username as a prefix to the bucket name. In my case, my username is kevintruvu, so all of my buckets will have the name kevintruvu.<name of my bucket>. The likelyhood that someone has used this bucket name is much lower, since my username is unique to AWS as well. The second strategy should be used when you want to make the contents of the bucket available publicly by way of a unique hostname you have access to. This is helpful when hosting static wEBites from S3, but can be used for media delivery as well. An example would be if I wanted to have all the files in the bucket accessible from http://media.example.com/. In this case, I would name my bucket media.example.com, and setup a CNAME record for media.example.com to point to the appropriate S3 url (!!!FILL IN S3 URL!!!). 
 
 Once, you've selected a naming strategy, click on the "+ Create bucket" button. You'll be taken to the following screen, where you can enter your DNS Compliant bucket name. I've decided to name my bucket kevintruvu.coffeeshopranker in order to guarantee uniqueness.
 
@@ -150,9 +150,41 @@ Are you sure you want to continue connecting (yes/no)?
 
 If you've setup everything correctly, you should get access to the command line prompt as the 'ubuntu' default user.  Congratulations, you've successfully setup your first EC2 server instance!
 
-### 2.3.4 DynamoDB
+### 2.3.5 DynamoDB
+Amazon DynamoDB is a non-relational, NoSQL database built for performance and scale. NoSQL means that data is typically not stored by default in a tabular way, and it's accessible directly by keys. By directly accessing the data with keys rather than complex queries, DynamoDB acts as a very fast, distributed hashtable with essentially O(1) performance for data access. In contrast, a SQL based relational database has internal data structures, and the Structured Query Language (SQL) that allow for general random access of any view into the data at any time in the future, while paying a price in performance. One of the most important parts of setting up a NoSQL database is the key design schema, since it will be your responsibility, as the application developer, to pre-define how data is accessed. Any modifications to data access will require new key design in order to maintain the expected performance, and efficiency provided by NoSQL databases.
 
-### 2.3.5 Relational Database Service (RDS)
+For more information about the details of DynamoDB, please visit <https://docs.aws.amazon.com/dynamodb/index.html> for throrough documentation.
 
-### 2.3.6 Lambda
+The first step in setting up DynamoDB is navigate to the DynamoDB Dashboard, and setup a new table for our datastore.
+
+!!! Insert DynamoDB Dashboard Image !!!!
+
+Once you're on the Dashboard, click on the Create Table button. We'll go into much more detail in the section on Datastore Design, however, to get a feel for DynamoDB, we'll create a very simple table to begin with that holds the User Inforamtion. 
+
+!!! Insert Create Table Image !!!!
+
+Enter "Users" into the Table name input field. Enter "UserID" into the Primary key field, and change the type dropdown to Number. This sets the primary key to UserID, which will be used to directly access the User information. Make sure the Add sort key checkbox is checked, and input "Location" as the sort key, and make sure the type dropdown is set to String. Make sure that the Use default settings checkbox is checked. Click on the Create button. This will create a very basic table we can use for testing access when setting up our middle-tier. 
+
+Once the table is created successfully, you should see the following Tables management screen. You can check the status of the table from here, as well as managing backups, inserting items, searching for items, managing alerts, and setting up indexes. We'll go into more detail on these functions in the section on datastore design.  
+
+!!! Insert Table Creation Image !!!
+
+Make sure your newly created Users table is selected, and click on the Items tab on the right panel. 
+
+!!! Insert Items Tab Image !!!
+
+Click on the Create Item button. You will be presented with the following overlay, where you can add a new item directly into the database. In order to 
+
+!!! Insert the Create Item Overlay!!!
+
+Insert a number into the UserID field, and a location string into the Location field. Click on the plus button to the left of Location, and choose Append, and select String. A new field will appear below Location. Call this field Username, and set the value to a username of your choosing. One major benefit of a NoSQL database is the ability to define fields on demand without having to manage updating large schema. This allows a developer to make an application decision at design time, and again at run time if necessary in order to store the necessary data for a new feature without having to retrofit existing databases, or having to update queries in the application. Click on the Save button, and you should see your newly input record in the Items list. 
+
+!!!! Insert the Items List Image !!!
+
+Congratulations, you've now setup your first NoSQL database table for use in the application. 
+
+### 2.3.5 Additional Services
+AWS is packed with services for all of your application needs, and they add more every year. It's beyond the scope of this book to add every valuable service that AWS has to offer, but I wanted to make sure I touched on a few that may not be used with our application, but would invaluable in a production environment. 
+
+When designing the material for this book, I was tempted to use Elastic Beanstalk (EB) for Docker Container deployment, however, for simplicity sake, I decided to stick with a vanilla non-managed EC2 instance in order to show how easy it is to setup a new server manually. In a production environment, I would almost always choose to use EB in order to scale the application on demand. EB is essentially an automated wrapper to EC2 provided additional functionality to manage application deployment, and scaling logic. For example, if you have an application that normally requires 5 servers to handle, however you see spiked traffic occassionaly requiring 10 servers to handle, with EB it's not necessary to run 10 servers all the time in anticipation of the traffic, when for most of the time, you'd have to pay for 5 servers sitting idly by. EB allows you to specify criteria for when to scale, and what limitations to set so you don't accidentally add 100 servers when you meant to cap out at 10. If you want more information on EB, you can find it at <https://docs.aws.amazon.com/elastic-beanstalk/index.html>.
 
