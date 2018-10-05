@@ -15,8 +15,8 @@ For this project, we'll be using AWS for media file storage, serving our API, as
 Navigate to the following url to signup for your free-tier AWS account: 
 <https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start>
 
-{width=50%,float=left}
-![AWS Signup Page](images/chapter2.3-aws/aws-signup.jpg)
+{width=85%}
+![AWS Signup Page](images/chapter2.3-aws/aws-signup.png)
 
 Enter your information, and follow the directions to the next page to enter your contact information. When choosing an account type, you should choose personal to begin with, then proceed to the billing page.
 
@@ -26,28 +26,28 @@ Once you input your billing information, you'll be asked to provide a phone numb
 
 Choose the "Basic Plan" since we won't initially need support from Amazon, however, if you do need support in the future, you can choose to change plans to the one that works for your situation.
 
-{width=50%}
-![AWS Support Plan](images/chapter2.3-aws/aws-support-plan.jpg)
+{width=85%}
+![AWS Support Plan](images/chapter2.3-aws/aws-support-plan.png)
 
 If everything goes well, you'll be presented with the following welcome page. From here, you can sign into the AWS Console where you'll manage all the services by clicking the "Sign In to the Console" button.
 
-{width=50%}
-![AWS Welcome Page](images/chapter2.3-aws/aws-welcome.jpg)
+{width=85%}
+![AWS Welcome Page](images/chapter2.3-aws/aws-welcome.png)
 
 You'll be taken to the login page. 
 
-{width=50%}
-![AWS Sign In](images/chapter2.3-aws/aws-signin.jpg)
+{width=85%}
+![AWS Sign In](images/chapter2.3-aws/aws-signin.png)
 
 Input the email you used during signup, then click 'Next' to be taken to the password page.
 
-{width=50%}
-![AWS Password](images/chapter2.3-aws/aws-password.jpg)
+{width=85%}
+![AWS Password](images/chapter2.3-aws/aws-password.png)
 
 Finally, if the login succeeded, you'll be shown the AWS Console Dashboard page. You can choose to initialize, modify, and monitor all of the services provided by AWS. 
 
-{width=50%}
-![AWS Dashboard](images/chapter2.3-aws/aws-dashboard.jpg)
+{width=85%}
+![AWS Dashboard](images/chapter2.3-aws/aws-dashboard.png)
 
 Congratulations, you've successfully signed up for Amazon Web Services!!! Everything you need to be successful is now at your fingertips. 
 
@@ -87,7 +87,7 @@ You can choose different storage options from the properties page, and whether t
 
 If everything looks good, click on the Upload button. Once the upload is successful, you should see the file listed in the directory. Clicking on the filename will take you to the overview page for that file. 
 
-There are various actions that can be taken on the file such as downloading the file directly, or making the file public if it's not already. If you click open, you'll be able to see the contents of the file in your browser, even if the file is private. However, if the file is public, you'll be presented with a Link at the bottom of the page. You should see something similar to https://s3.amazonaws.com/kevintruvu.coffeeshopranker/testfolder/graph.jpg. It should become obvious now why the bucket name is so critical, all objects in S3 standard storage are accessible via the s3.amazonaws.com hostname, where the top level directory is your bucket name. 
+There are various actions that can be taken on the file such as downloading the file directly, or making the file public if it's not already. If you click open, you'll be able to see the contents of the file in your browser, even if the file is private. However, if the file is public, you'll be presented with a Link at the bottom of the page. You should see something similar to https://s3.amazonaws.com/kevintruvu.coffeeshopranker/testfolder/graph.png. It should become obvious now why the bucket name is so critical, all objects in S3 standard storage are accessible via the s3.amazonaws.com hostname, where the top level directory is your bucket name. 
 
 If you were able to see the file in a browser, congratulations, you've successfully setup S3, and you now have the ability to upload and view media from a public url with only a few steps. 
 
