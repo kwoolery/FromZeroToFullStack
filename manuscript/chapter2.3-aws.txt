@@ -26,11 +26,28 @@ Once you input your billing information, you'll be asked to provide a phone numb
 
 Choose the "Basic Plan" since we won't initially need support from Amazon, however, if you do need support in the future, you can choose to change plans to the one that works for your situation.
 
+{width=50%}
+![AWS Support Plan](images/chapter2.3-aws/aws-support-plan.jpg)
+
 If everything goes well, you'll be presented with the following welcome page. From here, you can sign into the AWS Console where you'll manage all the services by clicking the "Sign In to the Console" button.
 
-You'll be taken to the login page. Input the email you used during signup, then click 'Next' to be taken to the password page.
+{width=50%}
+![AWS Welcome Page](images/chapter2.3-aws/aws-welcome.jpg)
+
+You'll be taken to the login page. 
+
+{width=50%}
+![AWS Sign In](images/chapter2.3-aws/aws-signin.jpg)
+
+Input the email you used during signup, then click 'Next' to be taken to the password page.
+
+{width=50%}
+![AWS Password](images/chapter2.3-aws/aws-password.jpg)
 
 Finally, if the login succeeded, you'll be shown the AWS Console Dashboard page. You can choose to initialize, modify, and monitor all of the services provided by AWS. 
+
+{width=50%}
+![AWS Dashboard](images/chapter2.3-aws/aws-dashboard.jpg)
 
 Congratulations, you've successfully signed up for Amazon Web Services!!! Everything you need to be successful is now at your fingertips. 
 
