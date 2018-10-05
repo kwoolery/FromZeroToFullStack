@@ -15,7 +15,7 @@ For this project, we'll be using AWS for media file storage, serving our API, as
 Navigate to the following url to signup for your free-tier AWS account: 
 <https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start>
 
-{width=50%, float=center}
+{height=50%, float=center}
 ![AWS Signup Page](images/chapter2.3-aws/aws-signup.png)
 
 Enter your information, and follow the directions to the next page to enter your contact information. When choosing an account type, you should choose personal to begin with, then proceed to the billing page.
@@ -36,12 +36,12 @@ If everything goes well, you'll be presented with the following welcome page. Fr
 
 You'll be taken to the login page. 
 
-{width=50%, float=center}
+{height=50%, float=center}
 ![AWS Sign In](images/chapter2.3-aws/aws-signin.png)
 
 Input the email you used during signup, then click 'Next' to be taken to the password page.
 
-{width=50%, float=center}
+{height=50%, float=center}
 ![AWS Password](images/chapter2.3-aws/aws-password.png)
 
 Finally, if the login succeeded, you'll be shown the AWS Console Dashboard page. You can choose to initialize, modify, and monitor all of the services provided by AWS. 
