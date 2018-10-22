@@ -1,4 +1,4 @@
-## 1.5 Project Based Approach
+## 1.6 Project Based Approach
 
 In order to fully appreciate what it means to be a full-stack engineer, it makes sense to look at each layer in the stack in depth, and instead of using abstract concepts that don't always produce a cohesive output, the project-based approach gives us an end goal that would be expected in a real-world environment. There are many resources in the world to allow the most dedicated developers to find the solutions they're looking for to most problems they will encounter in the software development lifecycle, however, it's rare to see an entire end-to-end guide for what the real world requires to design, build, and deploy projects. 
 

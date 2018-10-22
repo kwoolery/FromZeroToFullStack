@@ -1,0 +1,13 @@
+# Appendix C. Technology Recources
+
+## Visual Studio Code
+
+## Github
+
+## Docker
+
+## AWS
+
+## Go
+
+## React

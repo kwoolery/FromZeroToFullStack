@@ -1,14 +1,15 @@
 chapter1-introduction.txt
 chapter1.1-aboutme.txt
 chapter1.2-motivations.txt
-chapter1.3-whatisfullstack.txt
-chapter1.4-technologychoices.txt
-chapter1.5-projectbasedapproach.txt
+chapter1.3-whathisbookisnot.txt
+chapter1.4-whatisfullstack.txt
+chapter1.5-technologychoices.txt
+chapter1.6-projectbasedapproach.txt
 chapter2-thedevenvironment.txt
 chapter2.1-vscode.txt
 chapter2.2-github.txt
-chapter2.3-aws.txt
-chapter2.4-docker.txt
+chapter2.3-docker.txt
+chapter2.4-aws.txt
 chapter2.5-go.txt
 chapter2.6-nodejs.txt
 chapter2.7-react.txt
@@ -51,5 +52,6 @@ chapter10-testing.txt
 chapter11-debugging.txt
 appendixA-gitcommand.txt
 appendixB-markdown.txt
+appendixC-technologyresources.txt
 
 
