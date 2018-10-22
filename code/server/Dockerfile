@@ -8,6 +8,6 @@ RUN go install -v ./...
 
 RUN go build -o coffeeranker
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ./coffeeranker

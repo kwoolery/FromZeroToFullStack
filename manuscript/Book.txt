@@ -51,7 +51,9 @@ chapter9-deployment.txt
 chapter10-testing.txt
 chapter11-debugging.txt
 appendixA-gitcommand.txt
-appendixB-markdown.txt
-appendixC-technologyresources.txt
+appendixB-docker.txt
+appendixC-awscli.txt
+appendixD-markdown.txt
+appendixE-technologyresources.txt
 
 

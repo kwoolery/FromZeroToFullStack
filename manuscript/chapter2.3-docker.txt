@@ -4,3 +4,149 @@ Once upon a time, there was a person working in operations who had to setup a ne
 
 This is Docker. 
 
+We'll be using Docker to build containers for our local development environment as well as our deployment environment, allowing us to create a set of packages that can be isolated from your local environment. First, let's get Docker installed. 
+
+# 2.3.1 Installation
+
+We'll be using the Docker Community Edition (Docker CE) for our project. In order to download and install the correct version, navigate to <https://docs.docker.com/install/#supported-platforms> and find your desktop or server platform. 
+
+For macOS, you can find the newest version on the Docker Store at <https://store.docker.com/editions/community/docker-ce-desktop-mac>. After you signup for an account, you can follow the instructions on the page in order to get Docker CE downloaded and installed. 
+
+For Windows, you can find the newest version in the Docker Store at <https://store.docker.com/editions/community/docker-ce-desktop-windows>. After you signup for an account, you can follow the instructions on the page in order to get Docker CE downloaded and installed.
+
+For Linux variations, you can find the version you're running, and follow the link from the installation documentation page. If you're running Ubuntu, you can find the instructions for installation at <https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository>. Typically, the Linux installation is controlled by the local package manager, on Ubuntu that would be apt. Follow the instructions to setup the appropriate user, and group accounts, and get the local environment setup. For more information about what to do following installation on Linux, you can check out <https://docs.docker.com/install/linux/linux-postinstall/>. 
+
+Once you've installed Docker CE on your platform, you can open a terminal, or command window and run the following to verify that it's been installed correctly.
+
+```
+docker run hello-world
+```
+
+If everything was installed correctly, you should see a varioation of the following output.
+
+```
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://cloud.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/engine/userguide/
+ ```
+
+ If you see this message, congratulations, we're ready to build our first Docker Image. 
+
+ ## 2.3.2 Dockerfile
+
+ The Dockerfile is basically a text file that provides a recipe for Docker on how to build an image. You can inherit from existing images, copy local filesystems, run shell commands, and specify the main application for the running container.For this example, we're going to build a basic image that creates a web server that will deliver a hello world response when you navigate to http://127.0.0.1:8080/. We'll focus on more complex Dockerfiles when we discuss Go in section 2.5.
+
+ First, open your Coffee Shop Ranker project in Visual Studio Code. Create a directory called coffeeshop-ranker-docker-demo, and inside that directory create a file called index.html with the following contents. 
+
+ ```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World - Coffee Shop Ranker</title>
+    <style>
+        h1{
+            font-weight:lighter;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>
+        Hello World from Coffee Shop Ranker Demo!!!
+    </h1>
+
+</body>
+</html>
+ ```
+ 
+ Then inside the same directory create a file called Dockerfile. You should see the Docker Whale logo next to the file since Dockerfile is recognized by the Docker plugin for Visual Studio Code as a special file. On a sidenote, the Docker Whale has a name, and it's Moby Dock based on a vote in 2013. <https://blog.docker.com/2013/10/call-me-moby-dock/?fbclid=IwAR3dP6AmenJRELzb__VyCOOf3BNqBndm4yrs1NlZSsWm4Em8qEPo9DVVveY>
+
+In your newly created Dockerfile, insert the following. 
+
+```
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
+```
+
+The FROM command tells Docker to start this image with the baseline image called nginx:alpine. You can find more information about this image at <https://hub.docker.com/_/nginx/>. Nginx is a fast, lightweight webserver, and Alpine is a fast, lightweight Linux distribution. 
+
+The COPY command tells Docker to copy the local index.html file into the newly created image path at /usr/share/nginx/html/index.html. This is the default document root for Nginx. 
+
+In Visual Studio Code, right click on the Dockerfile, and choose Build Image from the menu. You can leave the default tag as coffeeshop-ranker-docker-demo:latest, and hit Enter to build the image. You should see a Docker terminal open in Visual Studio Code with a variation of following docker command and ouput.
+
+```
+docker build --rm -f "coffeeshop-ranker-docker-demo/Dockerfile" -t coffeeshop-ranker-docker-demo:latest coffeeshop-ranker-docker-demo
+Sending build context to Docker daemon  3.072kB
+Step 1/2 : FROM nginx:alpine
+alpine: Pulling from library/nginx
+4fe2ade4980c: Already exists
+c3f09dfaf47d: Pull complete
+83283d0e9bb9: Pull complete
+e2e530da9538: Pull complete
+Digest: sha256:ae5da813f8ad7fa785d7668f0b018ecc8c3a87331527a61d83b3b5e816a0f03c
+Status: Downloaded newer image for nginx:alpine
+ ---> aae476eee77d
+Step 2/2 : COPY index.html /usr/share/nginx/html/index.html
+ ---> c8817979ffdd
+Successfully built c8817979ffdd
+Successfully tagged coffeeshop-ranker-docker-demo:latest
+```
+
+The main command being run is ```docker build --rm -f "coffeeshop-ranker-docker-demo/Dockerfile" -t coffeeshop-ranker-docker-demo:latest coffeeshop-ranker-docker-demo``` 
+
+For a full reference to the docker command line tool, you can navigate to <https://docs.docker.com/engine/reference/commandline/build/#options>. 
+
+The first part of the command tells docker to build a new image, followed by the --rm option, which makes sure that any intermediate containers built will be removed. The -f option points to our Dockerfile. The -t option tags this build as the latest, and final value of coffeeshop-ranker-docker-demo names this image. 
+
+You can run the following command from the terminal to validate that the image was created, and that you're local Docker daemon is aware of it. 
+
+```
+docker images --filter reference=coffeeshop-ranker-docker-demo
+```
+
+You should see something like the following that lists the basic details of the newly created image.
+
+```
+REPOSITORY                      TAG                 IMAGE ID            CREATED            SIZE
+coffeeshop-ranker-docker-demo   latest              c8817979ffdd        5 minutes ago      17.7MB
+```
+
+After successful creation of the image, we can run it to make sure that it's working as expected. From a terminal window, run the following command. 
+
+```
+docker run --rm -it -p 8080:80 coffeeshop-ranker-docker-demo
+```
+
+This command tells docker to run the image pointed to by coffeeshop-ranker-docker-demo. The --rm in this context tells docker to remove the resulting container after this process exits. The -i option is interactive mode, and keeps STDIN open even if not attached. The -t option creates a pseudo-TTY for interacting with the container. The -p options maps the local port 8080 to port 80 of the running container. 
+
+You won't get any direct feedback from the command, but it will be running. The way to validate is to navigate to http://127.0.0.1:8080/ and make sure you see the following web page. 
+
+!!!! INSERT WEB PAGE !!!
+
+Congratulations, you've just installed, and run your first container!!!
+
+In the upcoming sections, we'll build more complicated images, and deploy them to the Amazon Elastic Container Registry, and eventually run the live on the Amazon Elastic Container Service. 
+
+
