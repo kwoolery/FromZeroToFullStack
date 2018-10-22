@@ -1,0 +1,7 @@
+1. Get a basic Docker image setup and document process
+2. Build a very basic go app to test deployment
+3. Setup and document ECR
+4. Setup and document ECS
+5. Setup a code pipeline for updated deployment
+6. Install AWS command line tools
+7. Test deployment
