@@ -57,7 +57,52 @@ Congratulations, you've successfully signed up for Amazon Web Services!!! Everyt
 
 To being, We're going to be setting up the Simple Storage Service, or more commonly known as S3, for use in our application to store uploaded media from customers.  
 
-### 2.4.2 Simple Storage Service (S3)
+### 2.4.2 AWS Identity and Access Management (IAM)
+
+In order access the services of your account, you need to configure the local tools to use the proper credentials. You need to have an AWS Access Key ID, and an AWS Secret Access Key. 
+
+To setup the proper credientials, navigate to the IAM console at <https://console.aws.amazon.com/iam/home?#/home>, and click on the Users option in the left hand menu. If there are no users listed in the table, click on the Add user button in order to add a new user. Create a new user called CoffeeShopRankerAPIUser, and make sure the Programattic Access option is checked in the Access Type section. Click on the Next: Permissions button. 
+
+On the permissions page, we need to create a group to add the newly created user to in order to grant AWS service access for the user. Click on the Create group button to get an overaly of all services available. In the Group name field, call the group CoffeeShopRankerAPIGroup. We're going to assign the following permissions to the newly created Group: 
+
+AmazonS3FullAccess
+AmazonECS_FullAccess
+AmazonDynamoDBFullAccess
+AmazonEC2FullAccess
+AmazonEC2ContainerRegistryFullAccess
+
+Once these permissions have been selected, click on the Create group button. Make sure the newly formed group is selected, and click on the Next:Review button. If everything looks good on the review page, click on the Create user button. 
+
+If the user was created successfully, you'l be taken to the user listing page where you should see the newly created user along with the Access key ID, and the Secret access key. Copy these values to a safe place, you'll use them later when intalling the AWS Command Line Tools. 
+
+### 2.4.3 AWS Command Line Tools (awscli)
+
+In order to automate the build, and deployment process, you'll need to install the AWS Command Line Tools. The AWS Command Line Tools are an open source tool that provides convenient commands for interacting with AWS services. You can use the tool to manage files on S3, deploy new containers to ECS, and to interact with DynamoDB among many other tasks. For more information on the tool, please visit <https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html> for complete documentation. For complete installation instructions, navigate to <https://docs.aws.amazon.com/cli/latest/userguide/installing.html>, and for complete configuration options, you can check out <https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html>. The following is a rough overview of how to get the AWS Command Line Tools installed. 
+
+In order to install AWS Command Line Tools, you'll need Python 2, version 2.6.5+, or Python 3 version 3.3+, as well as the pip package manager. You can manually install the tool, however for simplicity, I'll assume that you have pip installed. If you need instructions on installing pip, please see the documentation at <https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py>. In the simplest form, installing pip should be as easy as running the following from a terminal on any operating system, and following the instructions. If you're using python3, replace the python call with python3.
+
+'''
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+'''
+
+Once, you've verified that pip is installed, you can run the following command to install the tool. If you're using python3, replace the python call with python3.
+
+'''
+pip install awscli --upgrade --user
+'''
+
+Once the awscli package has been installed, you can verify that it's been installed correctly by running the following command. 
+
+'''
+aws --version
+'''
+
+You should get an output showing the current version of the AWS CLI, and which version of Python it's associated with. If you get something like "AWS CLI 1.11.84 (Python 3.6.1)", congratulations, you've installed the AWS Command Line Tools. 
+
+In order to use the AWS Command Line Tools, you need to configure the proper credentials. 
+
+### 2.4.4 Simple Storage Service (S3)
 
 Amazon S3 is a massively scalable object storage system built to store and retrieve any amount of data from anywhere. It can be used as a simple key-value store, or as a full-blown filesystem where files can be accessed directly given a fully qualified path. It can even be setup to serve a static wEBite with automatic index, and error pages, and redirects if necessary. We're not going to go into all of the features of S3 in this section, since there are an infinite number of options for storage, access, security, metadata, etc. If you're interested in knowing more about S3, I would recommend reading the Amazon S3 FAQ at https://aws.amazon.com/s3/faqs/?nc=sn&loc=6. 
 
@@ -97,7 +142,7 @@ If you were able to see the file in a browser, congratulations, you've successfu
 
 We'll mostly be dealing with S3 in an automated fashion throughout the rest of the project, since we'll be uploading and viewing files from applications rather than directly from web pages, we'll be using the Go AWS SDK to accomplish this. We'll also touch on the AWS command line tools in order to list, and manage files in S3 in a similar way as would be done in the local file sytem. 
 
-### 2.4.3 Elastic Compute Cloud (EC2)
+### 2.4.5 Elastic Compute Cloud (EC2)
 
 Amazon EC2 is a scalable computing platform that provides virtual server instances for quickly scaling based on your application requirements. When launching an EC2 server, you can decide the type of machine, and the software that is preloaded by using an Amazon Machine Image (AMI). You can start with a fully loaded instance, or you can start with a barebones instance and add all the requirements yourself, and save your image as an AMI for quickly launching new instances with your requirements built in. If you need detailed information about all the features EC2 offers, you can read the EC2 documentation at <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html>. We'll mostly focus on setting up a single free-tiered instance in order to show how to setup a general purpose server for local staging, and testing. Our app will eventually use the ECS (Elastic Container Service) to host our application Docker image. When we setup ECS with EC2, you should make sure that the EC2 instace we setup in this section is stopped in order to not incure additional charges.  
 
@@ -183,9 +228,20 @@ If you've setup everything correctly, you should get access to the command line 
 
 **In order to avoid additional charges, and to be taken out of the free tier, you should take down the EC2 Instance**
 
-### 2.4.3 Elastic Container Registry (ECR)
+### 2.4.6 Elastic Container Registry (ECR)
 
-### 2.4.4 Elastic Container Service
+In order to streamline deployment of our application, we need to host our Docker Image on a host that's accessible from our build system (AWS CodePipeline). You have a choice as to where to host, and some choose DockerHub, which is the official repository for Docker Images, however, Amazon AWS provides ECR for hosting your containers. 
+
+We're going to work with our test image we created in section 2.3.2. If you haven't created the image, go back to that section, and follow along to create the coffeeshop-ranker-docker-demo image. 
+
+Once you've successfully created the image, the next step is to push it to ECR. 
+
+!!! INSERT IMAGE !!!
+First, navigate in the AWS Management Console to the ECR Managment Page, and click on the Get started button. 
+
+On the Configure repository form, create a new repository name, in this case, you can use the same name as the image coffeeshop-ranker-docker-demo. Click on the Next step button to get a thorough set of instructions for building, tagging, and pushing your Docker image. 
+
+### 2.4.7 Elastic Container Service
 
 !!! Explain ECS and Refer to Docker Image!!!
 
@@ -194,7 +250,7 @@ Click on 'Get Started' Button to define your cluster.
 
 
 
-### 2.4.5 DynamoDB
+### 2.4.8 DynamoDB
 Amazon DynamoDB is a non-relational, NoSQL database built for performance and scale. NoSQL means that data is typically not stored by default in a tabular way, and it's accessible directly by keys. By directly accessing the data with keys rather than complex queries, DynamoDB acts as a very fast, distributed hashtable with essentially O(1) performance for data access. In contrast, a SQL based relational database has internal data structures, and the Structured Query Language (SQL) that allow for general random access of any view into the data at any time in the future, while paying a price in performance. One of the most important parts of setting up a NoSQL database is the key design schema, since it will be your responsibility, as the application developer, to pre-define how data is accessed. Any modifications to data access will require new key design in order to maintain the expected performance, and efficiency provided by NoSQL databases.
 
 For more information about the details of DynamoDB, please visit <https://docs.aws.amazon.com/dynamodb/index.html> for throrough documentation.
@@ -234,7 +290,7 @@ Insert a number into the UserID field, and a location string into the Location f
 Congratulations, you've now setup your first NoSQL database table for use in the application. 
 
 *** EVALUATE AFTER WRITING SECTION ON ECS AND DOCKER ***
-### 2.4.6 Additional Services
+### 2.4.9 Additional Services
 AWS is packed with services for all of your application needs, and they add more every year. It's beyond the scope of this book to add every valuable service that AWS has to offer, but I wanted to make sure I touched on a few that may not be used with our application, but would invaluable in a production environment. 
 
 When designing the material for this book, I was tempted to use Elastic Beanstalk (EB) for Docker Container deployment, however, for simplicity sake, I decided to stick with a vanilla non-managed EC2 instance in order to show how easy it is to setup a new server manually. In a production environment, I would almost always choose to use EB in order to scale the application on demand. EB is essentially an automated wrapper to EC2 provided additional functionality to manage application deployment, and scaling logic. For example, if you have an application that normally requires 5 servers to handle, however you see spiked traffic occassionaly requiring 10 servers to handle, with EB it's not necessary to run 10 servers all the time in anticipation of the traffic, when for most of the time, you'd have to pay for 5 servers sitting idly by. EB allows you to specify criteria for when to scale, and what limitations to set so you don't accidentally add 100 servers when you meant to cap out at 10. If you want more information on EB, you can find it at <https://docs.aws.amazon.com/elastic-beanstalk/index.html>.
