@@ -100,7 +100,17 @@ aws --version
 
 You should get an output showing the current version of the AWS CLI, and which version of Python it's associated with. If you get something like "AWS CLI 1.11.84 (Python 3.6.1)", congratulations, you've installed the AWS Command Line Tools. 
 
-In order to use the AWS Command Line Tools, you need to configure the proper credentials. 
+In order to use the AWS Command Line Tools, you need to configure the proper credentials to be used. Run the following command to create a new credential profile to be used.
+
+'''
+aws configure --profile coffeeshopranker
+'''
+
+You'll be asked to input your AWS Access Key ID, and your AWS Secret Access Key. You can use the keys created for the CoffeeShopRankerAPIUser in the IAM section 2.4.2 above. 
+
+Once you've created the profile, you can use this specific profile with the --profile argument on aws and be granted access to the appropriate services. 
+
+Congratulations, you've successfully setup command line access to AWS. Now on to the exciting services. 
 
 ### 2.4.4 Simple Storage Service (S3)
 
@@ -226,7 +236,7 @@ Are you sure you want to continue connecting (yes/no)?
 
 If you've setup everything correctly, you should get access to the command line prompt as the 'ubuntu' default user.  Congratulations, you've successfully setup your first EC2 server instance!
 
-**In order to avoid additional charges, and to be taken out of the free tier, you should take down the EC2 Instance**
+**In order to avoid additional charges, and to be taken out of the free tier, you should take down the EC2 Instance. We'll be setting up an Elastic Container Service Cluster with a single t2.micro instance in section 2.4.7. **
 
 ### 2.4.6 Elastic Container Registry (ECR)
 
@@ -239,14 +249,64 @@ Once you've successfully created the image, the next step is to push it to ECR.
 !!! INSERT IMAGE !!!
 First, navigate in the AWS Management Console to the ECR Managment Page, and click on the Get started button. 
 
-On the Configure repository form, create a new repository name, in this case, you can use the same name as the image coffeeshop-ranker-docker-demo. Click on the Next step button to get a thorough set of instructions for building, tagging, and pushing your Docker image. 
+On the Configure repository form, create a new repository name, in this case, you can use the same name as the image coffeeshop-ranker-docker-demo. Click on the Next step button to get a thorough set of instructions for building, tagging, and pushing your Docker image. You'll be required to use the AWS Command Line Tools, so make sure you followed along with sections 2.4.2, and 2.4.3 above to get the tool setup correctly.
 
-### 2.4.7 Elastic Container Service
+For this walkthrough, I'm going to follow the macOS and Linux commands necessary to get our image into ECR. If you're a Windows PowerShell user, you can find those instructions in parallel on the "View Push Commands" section. 
 
-!!! Explain ECS and Refer to Docker Image!!!
+First, retrieve the login command to authenticate your Docker client to your registry by running: 
 
-https://console.aws.amazon.com/ecs/home?region=us-east-1#/clusters
-Click on 'Get Started' Button to define your cluster.
+'''
+$(aws --profile coffeeshopranker ecr get-login --no-include-email --region us-east-1)
+'''
+
+This is a shell command that runs the docker login command with the appropriate settings for AWS. You can remove the $() in order to get the actual command to run independently. Once this command is run, you should see that Login Succeeded before moving onto the next step. 
+
+The next step is to build the current Docker Image from the directory where the Docker file exists, and tag it appropriately for ECR by running the following command. You can skip this step if you built the image as per the instructions in section 2.3.
+
+'''
+docker build -t coffeeshop-ranker-docker-demo .
+'''
+
+You should have a new image tagged as coffeeshop-ranker-docker-demo:latest. The next step is to tag the image to push the image to ECR by running the following command, or a variation depending on the ECR server you're being directed to. 
+
+'''
+docker tag coffeeshop-ranker-docker-demo:latest <ecr.server.url>/coffeeshop-ranker-docker-demo:latest
+'''
+
+Once you've tagged your image for ECR, it's time to push the image to the newly created repository by running the following command, again, you're ECR server will be unique to your repository.
+
+'''
+docker push <ecr.server.url>/coffeeshop-ranker-docker-demo:latest
+'''
+
+You should see each one of the dependent images being pushed to ECR, followed by the sha256 hash showing a successful deployment of the repository. If you navigate to the ECR listing, and choose coffeeshop-ranker-docker-demo from the list of repositories, you should see the latest image that you just deployed. Keep the Repository URI handy for setting up the ECS Container in the next section. Congratulations, you've successfully deployed a Docker Container to ECR. Onto getting it running in a Container Cluster. 
+
+
+### 2.4.7 Elastic Container Service (ECS)
+
+Amazon ECS is a highly scalable, high performance container orchestration service that supports running Docker containers in distributed clusters. For more detailed information about Amazon ECS, check out <https://aws.amazon.com/ecs/> 
+
+We'll setup a very basic free tiered version of ECS with a single EC2 t2.micro instance. Navigate to the ECS Management console at <https://console.aws.amazon.com/ecs/home?region=us-east-1#/clusters>
+
+Click on 'Create Cluster' Button to define your cluster. One the Cluster Template page, choose the EC2 Linux + Networking option. 
+
+On the Configure Cluster page, input CoffeeShopRankerECSCluster as your cluster name, and make sure you choose the On-Demand Instance as your Provisioning Model. Most importantly, make sure the choose the t2.micro EC2 instance type.  
+
+For the Key Pair options, choose Coffee Ranker Key Pair, or go to section 2.4.5 to follow the directions on creating a new Key Pair. 
+
+For the Networking Section, either choose to create a new VPC, or choose one that was created by following section 2.4.5. Once you choose a VPC, select the Subnet, and the Security Group. Keep a reference to the VPC ide, and the Subnet ID for setting up a public interface through the Elastic Load Balancer. You can choose the Security Group as created in section 2.4.5, or create a new one. If you choose one, follow the link to the Rules for that Security Group, and make sure that the inbound rules are setup to allow HTTP(80) from all sources (0.0.0.0/0). You'll also want to add another rule to allow SSH(22) from all sources. Click save, and go back to the ECS setup page. 
+
+Click on the Create button in order to finishing creating the cluster. If everything is setup correctly, you should see a Launch status page with three green boxes for setting up the ECS cluster, the ECS Instance IAM Policy, and the CloudFormation stack. 
+
+Click on the View Cluster button to be taken to the Cluster Details page. From here we'll need to create a new Task Definition to allow our Cluster to run our deployed image. 
+
+Click on the Task Definitions menu item, then click on Create new Task Definition button. Make sure to choose the EC2 launch type in order to utilize the EC2 free tier, and our t2.micro we brought up with the cluster. Click on Next step to proceed to the configuration page. 
+
+Enter CoffeeShopRankerTask as the Task Definition Name, and choose the ecsTaskExecutionRole as the Task Role. Leave the Network Mode set as <default>. Choose ecsTaskExecutionRole as the Task execution role. Leave Task Memory, and Task CPU blank. 
+
+Under Container Definitions, click on the Add container button. You'll be presetned with an Add Container Form. Set the Container name to CoffeeShopRankerContainer. Input the Image URI from the end of section 2.4.7 above. For Memory Limits, choose a Hard Limit of 300 MiB. For Port Mappings, input host port 80 and container port 80. Scroll to the bottom of the form, and click the Add button. Then click on the Create button on the Task Definition Page. You should be directed to a page that shows that your Task Definition has been created successfully. 
+
+Navigate back to the Cluster Details page, and click on the Create button on the Services tab. On the Configure service page, choose EC2 as the launch type, and make sure the Task Definition points the newly created Task Definition. Set the Service name to CoffeeShopRankerService. Choose DAEMON as the Service Type, then click on the Next step button.
 
 
 
