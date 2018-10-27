@@ -81,30 +81,30 @@ In order to automate the build, and deployment process, you'll need to install t
 
 In order to install AWS Command Line Tools, you'll need Python 2, version 2.6.5+, or Python 3 version 3.3+, as well as the pip package manager. You can manually install the tool, however for simplicity, I'll assume that you have pip installed. If you need instructions on installing pip, please see the documentation at <https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py>. In the simplest form, installing pip should be as easy as running the following from a terminal on any operating system, and following the instructions. If you're using python3, replace the python call with python3.
 
-'''
+```
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
-'''
+```
 
 Once, you've verified that pip is installed, you can run the following command to install the tool. If you're using python3, replace the python call with python3.
 
-'''
+```
 pip install awscli --upgrade --user
-'''
+```
 
 Once the awscli package has been installed, you can verify that it's been installed correctly by running the following command. 
 
-'''
+```
 aws --version
-'''
+```
 
 You should get an output showing the current version of the AWS CLI, and which version of Python it's associated with. If you get something like "AWS CLI 1.11.84 (Python 3.6.1)", congratulations, you've installed the AWS Command Line Tools. 
 
 In order to use the AWS Command Line Tools, you need to configure the proper credentials to be used. Run the following command to create a new credential profile to be used.
 
-'''
+```
 aws configure --profile coffeeshopranker
-'''
+```
 
 You'll be asked to input your AWS Access Key ID, and your AWS Secret Access Key. You can use the keys created for the CoffeeShopRankerAPIUser in the IAM section 2.4.2 above. 
 
@@ -255,29 +255,29 @@ For this walkthrough, I'm going to follow the macOS and Linux commands necessary
 
 First, retrieve the login command to authenticate your Docker client to your registry by running: 
 
-'''
+```
 $(aws --profile coffeeshopranker ecr get-login --no-include-email --region us-east-1)
-'''
+```
 
 This is a shell command that runs the docker login command with the appropriate settings for AWS. You can remove the $() in order to get the actual command to run independently. Once this command is run, you should see that Login Succeeded before moving onto the next step. 
 
 The next step is to build the current Docker Image from the directory where the Docker file exists, and tag it appropriately for ECR by running the following command. You can skip this step if you built the image as per the instructions in section 2.3.
 
-'''
+```
 docker build -t coffeeshop-ranker-docker-demo .
-'''
+```
 
 You should have a new image tagged as coffeeshop-ranker-docker-demo:latest. The next step is to tag the image to push the image to ECR by running the following command, or a variation depending on the ECR server you're being directed to. 
 
-'''
+```
 docker tag coffeeshop-ranker-docker-demo:latest <ecr.server.url>/coffeeshop-ranker-docker-demo:latest
-'''
+```
 
 Once you've tagged your image for ECR, it's time to push the image to the newly created repository by running the following command, again, you're ECR server will be unique to your repository.
 
-'''
+```
 docker push <ecr.server.url>/coffeeshop-ranker-docker-demo:latest
-'''
+```
 
 You should see each one of the dependent images being pushed to ECR, followed by the sha256 hash showing a successful deployment of the repository. If you navigate to the ECR listing, and choose coffeeshop-ranker-docker-demo from the list of repositories, you should see the latest image that you just deployed. Keep the Repository URI handy for setting up the ECS Container in the next section. Congratulations, you've successfully deployed a Docker Container to ECR. Onto getting it running in a Container Cluster. 
 
