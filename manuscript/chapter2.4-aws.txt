@@ -308,6 +308,8 @@ Under Container Definitions, click on the Add container button. You'll be preset
 
 Navigate back to the Cluster Details page, and click on the Create button on the Services tab. On the Configure service page, choose EC2 as the launch type, and make sure the Task Definition points the newly created Task Definition. Set the Service name to CoffeeShopRankerService. Choose DAEMON as the Service Type, then click on the Next step button.
 
+--- Create a load balancer
+--- Follow all the steps!!!
 
 
 ### 2.4.8 DynamoDB
