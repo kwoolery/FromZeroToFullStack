@@ -11,12 +11,10 @@ chapter2.2-github.txt
 chapter2.3-docker.txt
 chapter2.4-aws.txt
 chapter2.5-go.txt
-chapter2.6-nodejs.txt
-chapter2.7-react.txt
-chapter2.8-redux.txt
-chapter2.9-authentication.txt
-chapter2.10-seleniumforgo.txt
-chapter2.11-travisci.txt
+chapter2.6-react.txt
+chapter2.7-authentication.txt
+chapter2.8-seleniumforgo.txt
+chapter2.9-travisci.txt
 chapter3-theproject.txt
 chapter3.1-thefrontend.txt
 chapter3.2-thebackend.txt

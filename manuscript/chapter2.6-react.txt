@@ -1,0 +1,26 @@
+
+## 2.6 React
+
+React was created by Jordan Wilke, a software engineer at Facebook sometime before 2011. It was initially deployed on Facebook's newsfeed in 2011, and then on Instagram in 2012. It was made available to the public as an open source project in May of 2013.  
+
+The design of React was heavily influenced by XHP, an HTML component framework for PHP, also built by Facebook to essentially embed XML syntax directly into PHP code, thus eliminating boilerplate conversion code usually necessary when transitioning between PHP objects, and HTML components.  
+
+Some notable features of React include one-way data binding with props, stateful components, the virtual DOM, and lifecycle methods, as well as JSX. We'll discuss all of these features below. 
+
+### 2.6.1 ReactJS
+
+### 2.6.2 ReactNative
+
+### 2.6.3 Basic Concepts
+
+#### 2.6.3.1 One-way Data Binding with props
+#### 2.6.3.2 Stateful components
+#### 2.6.3.3 Virtual DOM
+#### 2.6.3.4 Lifecycle Methods
+#### 2.6.3.5 JSX
+
+### 2.6.4 React Router
+Media Query
+
+### 2.6.5 Redux
+Redux Sagas

@@ -1,1 +1,71 @@
-## 2.5 Go Language
+## 2.5 Go Language (GoLang)
+
+Go is a modern programming language designed by Robert Griesemer, Rob Pike, and Ken Thompson. It was originally created to address issues that Google was encountering with C/C++, Java and Python, and the lack of inherent support for multicore CPU architectures, large scale networked systems, massive computation clusters, and the web programming model. Go was designed with productivity in mind for both experienced, and non-experienced engineers alike. 
+
+Go differs from it's predecessors in some key ways. Go is a fast, compiled, concurrent, garbage-collected, statically typed language designed to help solve Google's big problems. Some languages offer better support of the required features, but according to Google, at the time of Go's introduction, none of the languages were able to elegantly, or satisfactorily able solve them all at scale. For more details on the motivation behind Go's development, check out this article <https://talks.golang.org/2012/splash.article>. 
+
+For a thorough FAQ, that answers just about everythin you'd want to know, including the origin of the Go Gopher logo, and why Go has chosen to not include generics as of v1.11, please read <https://golang.org/doc/faq>. 
+
+Keep in mind that Go is not like a lot of other programming languages that you've used. They attempted to design a language and ecosystem that is conducive to optimizing the job of building software at scale, either by way of keeping the language semantics simple, the error handling understandable, or forcing the code format to be uniform by using gofmt. Go is also not considered an object oriented language in the strictest definition, however, there are constructs that make some features of the language feel object oriented, including structs, and method definitions. There are a few things that new developers, especially those coming from Node.js, or Python have issues with, primarily, the Go Package Management system was basically non-existent up to version 1.11 of the language, where they introduced a beta version of Modules. Modules is scoped to be fully released in version 1.12 due out at the end January, 2019. Anyone familiar with the new way of building modules will be happy to move away from GOPATH contstraints of previous versions. We'll talk more about Modules and dependency management in later sections. For a more complete introduction to Modules in 1.11, you can go to <https://github.com/golang/go/wiki/Modules>.  
+
+### 2.5.1 Installation
+
+Visit <https://golang.org/dl/> to find the Go installers, or source link if you're interested in building from the command line. Remember that if you have a previous version of Go installed, you'll have to remove it before installing the new version. 
+
+Once you've downloaded the appropriate installer for macOS or Windows, open it, and follow the prompts to install the Go tools. The macOS package installs the Go distribution to /usr/local/go, the Windows package installs to c:\Go. On Linux, you'll have to unpack the tarball into /usr/local, or another path of choice, and append the PATH environment variable to included /usr/local/go/bin in order to access the Go tools. 
+
+Once installation has completed successfully, you can verify that everything is working by opening a new file called main.go, and typing the following. 
+
+```
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+Save the file, and type "go run main.go" from the command line. You should see the familiar "Hello, World!" output. If this worked for you, congratulations, you've successfully installed Go! We'll discuss more about the format, semantics, and language features as we move into actually building the project.
+
+### 2.5.2 Basic Concepts 
+
+--Basics
+--Packages, Variables, Functions
+--Flow Control: for, if, else, switch, Defer
+--More types: structs, slices, Maps
+--Methods and Interfaces
+--Concurrency
+
+#### 2.5.2.1 Program Structure
+Exported names
+#### 2.5.2.2 Packages
+#### 2.5.2.3 Imports
+#### 2.5.2.4 Functions
+Multiple results
+Function Closures
+
+#### 2.5.2.5 Variables
+#### 2.5.2.6 Basic Types
+#### 2.5.2.7 For Loop
+#### 2.5.2.8 Conditionals
+#### 2.5.2.9 Switch
+#### 2.5.2.10 Defer
+#### 2.5.2.11 Pointers
+#### 2.5.2.12 Structs
+Methods are Functions
+#### 2.5.2.13 Arrays
+#### 2.5.2.14 Slices
+#### 2.5.2.15 Range
+#### 2.5.2.16 Maps
+#### 2.5.2.17 Interfaces
+Type Assertions
+#### 2.5.2.18 Errors
+#### 2.5.2.19 Goroutines - Concurrency
+#### 2.5.2.20 Channels
+Select
+#### 2.5.2.21 Mutex
+
+
+
+
